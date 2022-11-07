@@ -24,7 +24,10 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="wrapper">hello world</div>
+    <div className="wrapper"> 
+      <div className="cardlayer"></div>
+      <div className="contentlayer"></div>
+    </div>
   )
 }
 
