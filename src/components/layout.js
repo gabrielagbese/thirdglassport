@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <div className="wrapper"> 
       <div className="cardlayer">
-        
+        <div className="card">card</div>
       </div>
       <div className="contentlayer">
         <div className="content">content</div>
