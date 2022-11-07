@@ -12,13 +12,27 @@
 }
 
 .cardlayer{
+    position: absolute;
     width: 100%;
-    height: 80%;
+    height: 100%;
     background-color: pink;
 }
 
 .contentlayer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+.content{
     width: 100%;
     height: 80%;
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.nav{
+    width: 100%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.749);
 }
