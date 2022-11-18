@@ -12,11 +12,11 @@
 
 ::-webkit-scrollbar-thumb {
     border-radius: 3px;
-    background-color: rgba(128, 0, 128, 0.17);
+    background-color: rgba(255, 255, 255, 0.614);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(94, 115, 188, 0.614);
+    background-color: rgba(255, 255, 255, 0.614);
 }
 
 
@@ -39,6 +39,15 @@
     scrollbar-width: 0;
 }
 
+.wrapper2 {
+    color: white;
+    //background-color: #121112;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    scrollbar-width: 0;
+}
+
 .cardlayer {
     display: flex;
     flex-direction: column;
@@ -55,17 +64,39 @@
 .content {
     @include xs {
         height: 80%;
+        overflow-y: hidden;
     }
 
-    @include md {
+    @include lg {
+        height: 85%;
+        overflow-y: hidden;
+    }
+
+
+
+    width: 100%;
+    
+    //overflow-x: hidden; /* Hide horizontal scrollbar */
+    scrollbar-width: 0;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.content2 {
+    @include xs {
+        height: 80%;
+    }
+
+    @include lg {
         height: 85%;
     }
 
+
+
     width: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden; /* Hide horizontal scrollbar */
     scrollbar-width: 0;
-    background-color: rgba(0, 0, 0, 0.575);
+    //background-color: rgba(0, 0, 0, 0.575);
 }
 
 .nav {
@@ -75,7 +106,7 @@
 
     @include xs {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         padding-top: 10px;
         width: 100%;
         height: 20%;
@@ -86,7 +117,7 @@
         box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.415);
     }
 
-    @include md {
+    @include lg {
         flex-direction: row;
         justify-content: center;
         //border: thin solid red;
@@ -105,6 +136,9 @@
 .visible {
     opacity: 0;
 }
+.visible2 {
+    opacity: 0;
+}
 
 .navspan {
     display: flex;
@@ -117,7 +151,7 @@
         border-bottom: thin solid rgba(255, 255, 255, 0.036);
     }
 
-    @include md {
+    @include lg {
         width: 20%;
         //border: thin solid blue;
         flex-direction: column;
@@ -140,7 +174,7 @@
         width: 90%;
     }
 
-    @include md {
+    @include lg {
         width: auto;
         font-size: 2.5rem;
         font-weight: 500;
@@ -153,7 +187,7 @@
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.523);
 
-    @include md {
+    @include lg {
         visibility: hidden;
     }
 }
@@ -167,33 +201,42 @@
         visibility: hidden;
     }
 
-    @include md {
+    @include lg {
         visibility: visible;
     }
 }
 
 .top {
-    width: 100%;
+    
     height: 10%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-left: 0%;
+    //padding-right: 5%;
     font-size: 2rem;
     color: white;
     font-weight: 400;
+    z-index: 5;
+    //border: thin solid red;
+
+    @include xs {
+        width: 90%;
+    }
+    @include lg {
+        width: 80%;
+    }
 }
 
 .standin {
+    height: 100%;
     @include xs {
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 20px;
+        padding-top: 30px;
         padding-bottom: 30px;
     }
 
-    @include md {
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-top: 10px;
+    @include lg {
+        padding-top: 25px;
         padding-bottom: 30px;
     }
 }
@@ -207,7 +250,7 @@
         background: linear-gradient(to bottom, black, black, rgb(217, 0, 255) 99%);
     }
 
-    @include md {
+    @include lg {
         background: linear-gradient(to bottom,
                 rgba(0, 0, 0, 0.21),
                 rgba(0, 0, 0, 0.144),
@@ -217,14 +260,14 @@
 
 .cardwrapper {
     @include xs {
-        border-right: 2.5px solid rgba(255, 255, 255, 0.2);
+        //border-right: 2.5px solid rgba(255, 255, 255, 0.2);
         border-radius: 15px 15px 0px 0px;
         width: 92.5%;
         height: 85%;
     }
 
-    @include md {
-        border-right: 2.45px solid rgba(255, 255, 255, 0.075);
+    @include lg {
+        //border-right: 2.45px solid rgba(255, 255, 255, 0.075);
         border-radius: 20px 20px 0px 0px;
         width: 80%;
         height: 85%;
@@ -242,7 +285,7 @@
     width: 100%;
     height: 100%;
 
-    @include md {
+    @include lg {
         margin-left: 25vw;
     }
 }
@@ -254,14 +297,16 @@
     height: 60vh;
     border-radius: 40%;
     background: linear-gradient(90deg,
-            rgba(0, 0, 255, 0.404),
-            rgba(107, 0, 128, 0.637));
+            rgba(0, 0, 255, 0.554),
+            rgba(107, 0, 128, 0.737)); 
     filter: blur(72px);
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.2);
 
-    @include md {
-        width: 60vh;
-        height: 60vh;
+    @include lg {
+        width: 65vw;
+        height: 65vw;
+        margin-left: -20%;
+        filter: blur(152px);
     }
 }
 
@@ -286,7 +331,7 @@
         height: 100%;
     }
 
-    @include md {
+    @include lg {
         background: linear-gradient(-135deg,
                 rgba(227, 206, 206, 0.131) 5%,
                 rgba(0, 0, 0, 0.344));
@@ -309,7 +354,7 @@
         height: 100%;
     }
 
-    @include md {
+    @include lg {
         //background: url(../images/10782112.jpg) ;
         background-size: cover;
         border-radius: 40px 40px 0px 0px;
@@ -340,7 +385,7 @@
         // height: 40vh;
     }
 
-    @include md {
+    @include lg {
         margin-left: 15vw;
         // width: 70vw;
         // height: 40vh;
@@ -369,7 +414,7 @@
         height: 40vh;
     }
 
-    @include md {
+    @include lg {
         margin-left: 15vw;
         width: 70vw;
         height: 40vh;
@@ -381,7 +426,7 @@
     width: 100%;
     height: 100%;
     //background-color: blue;
-    overflow: hidden;
+    overflow-y: hidden;
     scrollbar-width: 0;
     display: row;
     align-items: center;
@@ -399,7 +444,7 @@
         height: 90%;
     }
 
-    @include md {
+    @include lg {
         margin-left: 10%;
         margin-top: 12vh;
         width: 80%;
@@ -412,9 +457,9 @@
     opacity: 1;
     @include xs{
         flex-direction: column;
-        //overflow-y: auto;
+        overflow-y: auto;
     }
-    @include md{
+    @include lg{
         flex-direction: row;
         overflow: hidden;
     }
@@ -423,13 +468,24 @@
 .bigtext{
     opacity: 0;
     font-size: 3rem;
+    padding: 1rem;
 }
+
 .midtext{
     font-size: 2rem;
+}
+.smidtext{
+    font-size: 1.75rem;
 }
 .smalltext{
     font-size: 1rem;
     
+}
+.header{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(255, 255, 255, 0.214);
 }
 
 .side{
@@ -438,7 +494,7 @@
         width: 99%;
         //border: thin solid green;
     };
-    @include md{
+    @include lg{
         height: 100%;
         width: 40%;
         margin-left: 10px;
@@ -461,7 +517,7 @@
     @include xs{
         border: 1px solid rgba(178, 164, 135, 0.29);
     };
-    @include md{
+    @include lg{
         border: 1px solid rgba(178, 164, 135, 0.279);
     };
 }
@@ -474,7 +530,7 @@
         margin-bottom: 12px;
         margin-top: 12px;
     };
-    @include md{
+    @include lg{
         margin-top: 10px;
         height: 96%;
         width: 59%;
@@ -492,7 +548,7 @@
         height: 30%;
         width: 99%;
     }
-    @include md{
+    @include lg{
         //background-color: yellow;
         height: 15%;
         width: 100%;
@@ -508,7 +564,7 @@
         height: 70%;
         //border: thin solid yellow;
     }
-    @include md{
+    @include lg{
         flex-direction: row;
         width: 100%;
         height: 30%;
@@ -528,7 +584,12 @@
 }
 
 .biotext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
+    
     width: 60%;
     height: 100%;
     //margin-bottom: 12px;
@@ -537,7 +598,7 @@
 .biotexttext{
     opacity: 0;
     font-size: 2.5rem;
-    @include md{
+    @include lg{
         margin-left: 10%;
     }
     //align-self: ;
@@ -548,7 +609,7 @@
     @include xs{
         display: none;
     };
-    @include md{
+    @include lg{
        display: flex;
        width: 100%;
        height: 50.5%;
@@ -564,8 +625,255 @@
         height: 30%;
         //border: thin solid grey;
     };
-    @include md{
+    @include lg{
         display: none;
       };
+}
+
+.about-button{
+    
+    margin-bottom: 5%;
+    border: thin solid rgba(191, 183, 153, 0.35);
+    background-color: #121112b8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.5;
+
+    @include xs{
+        width: 95%;
+        height: 22%;
+        padding: 8px 10px;
+    };
+    @include lg{
+        width: 92%;
+        height: 22%;
+        padding: 5px 8px;
+    };
+}
+
+.about-button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.alertwrapper{
+    width: auto;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: right;
+    //margin-top: 5%;
+    //border: thin solid blue;
+}
+.alert {
+    width: auto;
+    height: auto; 
+    background-color: rgba(255, 255, 255, 0.723);
+    color: white;
+    position: absolute;
+    z-index: 7;
+    display: none;
+    //margin-top: 5%;
+    @include xs{
+        margin-top: 20%;
+    };
+    @include lg{
+        margin-top: 5%;
+    }
+  }
+
+  .gif {
+    padding: 9px;
+    //background-image: url(/src/images/gif.gif);
+    background-size: contain;
+
+    @include xs{
+        width: 80vw;
+        height: 46vw;
+        
+    };
+    @include lg{
+        width: 30vw;
+        height: 36vh;
+    }
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .icon{
+    scale: 0.75;
+  }
+
+  .project{
+    
+    display: flex;
+    @include xs{
+        flex-direction: column;
+    };
+    @include lg{
+        flex-direction: row;
+    };
+  }
+
+  .projectside{
+    opacity: 0;
+    z-index: 2;
+    @include xs{
+        width: 100%;
+        height: 30%;
+        background-color: #00000062;
+        border-radius: 15px 15px 0px 0px;
+        margin-top: -0.75%;
+        margin-left: -0.5%;
+        backdrop-filter: blur(5px);
+        transform: translate3d(0, 0, 0);
+        transform: translateZ(0);
+        border-bottom: 1.25px solid rgba(255, 255, 255, 0.235);
+    };
+    @include lg{
+        position: absolute;
+        width: 30%;
+        height: 73%;
+        background-color: #00000032;
+        border-right: 2px solid rgba(255, 255, 255, 0.135);
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+        border-radius: 20px 0px 0px 0px;
+        margin-top: -0.2%;
+        margin-left: 0.2%;
+        backdrop-filter: blur(8px);
+        transform: translate3d(0, 0, 0);
+        transform: translateZ(0);
+    };
+  }
+
+  .projectcontent{
+    opacity: 0;
+    //overflow-x: scroll;
+    //overflow-x: scroll;
+    display: flex;
+    @include xs{
+        width: 110%;
+        height: 65%;
+        //background-color: #e717e74f;
+        margin-left: -0.5%;
+    };
+    @include lg{
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        
+        //background-color: #e717e74f;
+
+    };
+}
+
+.projectswrapper{
+    display: flex;
+    overflow-x: scroll;
+    height: 100%;
+    width: 150%;
+
+    @include xs{
+        padding-right: 10%;
+    };
+    @include lg{
+        padding-right: 0%;
+    };
+    
+}
+
+
+.projectitem{
+    cursor: grab;
+    //background-color: #2196F3;
+    opacity: 0.8;
+    margin: 3%;
+    margin-left: 0;
+    @include xs{
+        min-width: 70%; 
+        height: 90%;
+    };
+    @include lg{
+        min-width: 40%; 
+        height: 90%;
+    };
+}
+
+.dragscroll {
+ cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;
+  }
+
+.space{
+    
+    @include xs{
+        min-width: 2%;
+        height: 30px;
+    };
+    @include lg{
+        min-width: 40%;
+        height: 30px;
+    };
 }
 
