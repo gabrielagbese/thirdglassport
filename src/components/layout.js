@@ -212,14 +212,14 @@ function changeColor(color1,color2,color3) {
 }
 
 function moveBall1() {
-  var tl = gsap.timeline({ repeat: -1 })
-  tl.to("#ball1", 3, { x: 170, yoyo: true, repeat: 1 })
-  tl.to("#ball1", 3, { y: -170, yoyo: true, repeat: 1 })
+  // var tl = gsap.timeline({ repeat: -1 })
+  // tl.to("#ball1", 3, { x: 170, yoyo: true, repeat: 1 })
+  // tl.to("#ball1", 3, { y: -170, yoyo: true, repeat: 1 })
 }
 function moveBall2() {
-  var tl = gsap.timeline({ repeat: -1 })
-  tl.to("#ball2", 3, { y: 200, yoyo: true, repeat: 1 })
-  tl.to("#ball1", 3, { x: -150, yoyo: true, repeat: 1 })
+  // var tl = gsap.timeline({ repeat: -1 })
+  // tl.to("#ball2", 3, { y: 200, yoyo: true, repeat: 1 })
+  // tl.to("#ball1", 3, { x: -150, yoyo: true, repeat: 1 })
 }
 
 var ballIsMoving;

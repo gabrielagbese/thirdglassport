@@ -19,7 +19,7 @@ const Contact = ({fn}) => {
                 <div className="contact section">
                     <div className="contactside">
                     <h1 className="random-word">
-                        <TextAnimation.Slide 
+                        {/* <TextAnimation.Slide 
                         target="Have an interesting project?" 
                         word="push"
                         text={['Want to collaborate?','Want me on your team?', 'Want to have a chat?',]}
@@ -30,7 +30,7 @@ const Contact = ({fn}) => {
                         }}
                         >
                         Have an interesting project?
-                        </TextAnimation.Slide>
+                        </TextAnimation.Slide> */}
                     </h1>
                         <div className="sociallinks"> 
                             <span><p>linkedin</p></span>
