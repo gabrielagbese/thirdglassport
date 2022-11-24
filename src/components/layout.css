@@ -1089,7 +1089,7 @@ input:checked + .slider:before {
 }
 
 .projectside {
-  opacity: 1;
+  opacity: 0;
   z-index: 2;
 }
 
@@ -1329,7 +1329,7 @@ input:checked + .slider:before {
 }
 
 .contactside {
-  opacity: 1;
+  opacity: 0;
   z-index: 2;
 }
 
@@ -1478,6 +1478,7 @@ input:checked + .slider:before {
 }
 
 .sociallinks {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

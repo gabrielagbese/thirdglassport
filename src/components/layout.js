@@ -474,6 +474,9 @@ function contactSelect(){
     tl1.fromTo(".contactcontent",
       { opacity: 0.3, y: "100%" },
       { opacity: 1, duration: 1, y: "0%" })
+    tl1.fromTo(".sociallinks",
+      { opacity: 0},
+      { opacity: 1, duration: 1,})
 
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     firstMoveBalls()
@@ -490,6 +493,9 @@ function contactSelect(){
     tl1.fromTo(".contactcontent",
       { opacity: 0.3, y: "100%" },
       { opacity: 1, duration: 1, y: "0%" })
+    tl1.fromTo(".sociallinks",
+      { opacity: 0},
+      { opacity: 1, duration: 1,})
 
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     firstMoveBalls()
