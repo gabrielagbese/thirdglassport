@@ -151,7 +151,8 @@ const Layout = ({ children }) => {
             onClick={() => {
               darken()
               setActive("aboutCard")
-
+              var contentlight = document.getElementsByClassName("content")[0]
+              contentlight.style.opacity = 1;
               setTimeout(() => {
                 aboutSelect()
                 changeColor(" #0000ff", "#6b0080", "#0000ff")
@@ -167,7 +168,8 @@ const Layout = ({ children }) => {
             onClick={() => {
               darken()
               setActive("projectsCard")
-
+              var contentlight = document.getElementsByClassName("content")[0]
+              contentlight.style.opacity = 1;
               setTimeout(() => {
                 projectSelect()
                 changeColor("#3322ff", "#11d9ff", "#3322ff")
@@ -182,7 +184,8 @@ const Layout = ({ children }) => {
             onClick={() => {
               darken()
               setActive("contactCard")
-
+              var contentlight = document.getElementsByClassName("content")[0]
+              contentlight.style.opacity = 1;
               setTimeout(() => {
                 contactSelect()
                 changeColor("#11d9ff", "#3322ff", "#dc0080")
@@ -279,8 +282,10 @@ function moveBalls() {
 
 function darken() {
   var cardlight = document.getElementsByClassName("cardwrapper")[0]
+  
   console.log(cardlight.style.opacity,"opacity")
   cardlight.style.opacity = 0;
+  
 }
 
 
