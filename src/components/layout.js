@@ -277,7 +277,8 @@ function moveBalls() {
 
 
 function darken() {
-  tl14.to(".card",{opacity: 0})
+  var cardlight = document.querySelectorAll(".card")
+  cardlight.style.opacity = 0;
 }
 
 
