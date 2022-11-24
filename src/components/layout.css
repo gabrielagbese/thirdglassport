@@ -1146,7 +1146,7 @@ input:checked + .slider:before {
 @media (min-width: 0px) {
   .projectcontent {
     width: 120%;
-    height: 69%;
+    height: 68%;
     margin-left: -0.5%;
   }
 }
@@ -1363,6 +1363,7 @@ input:checked + .slider:before {
 }
 
 .contactcontent {
+  opacity: 0;
   border-top: 2px solid rgba(255, 255, 255, 0.125);
   border-left: 2px solid rgba(255, 255, 255, 0.125);
   border-right: 2px solid rgba(255, 255, 255, 0.125);

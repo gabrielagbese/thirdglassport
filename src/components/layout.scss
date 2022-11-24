@@ -919,7 +919,7 @@
     display: flex;
     @include xs{
         width: 120%;
-        height: 69%;
+        height: 68%;
         //background-color: #e717e74f;
         margin-left: -0.5%;
     };
@@ -1121,6 +1121,7 @@
 
 
 .contactcontent{
+    opacity: 0;
     border-top: 2px solid rgba(255, 255, 255, 0.125);
     border-left: 2px solid rgba(255, 255, 255, 0.125);
     border-right: 2px solid rgba(255, 255, 255, 0.125);
