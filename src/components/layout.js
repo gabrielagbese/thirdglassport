@@ -168,7 +168,7 @@ const Layout = ({ children }) => {
               setTimeout(() => {
                 projectSelect()
                 changeColor("#3322ff", "#11d9ff", "#3322ff")
-              }, 0.01)
+              }, 0.1)
             }}
             className="navspan"
           >
@@ -182,7 +182,7 @@ const Layout = ({ children }) => {
               setTimeout(() => {
                 contactSelect()
                 changeColor("#11d9ff", "#3322ff", "#dc0080")
-              }, 0.01)
+              }, 0.1)
             }}
             className="navspan"
           >
