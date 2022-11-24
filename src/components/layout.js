@@ -148,6 +148,7 @@ const Layout = ({ children }) => {
         <div className="nav">
           <span
             onClick={() => {
+              darken()
               setActive("aboutCard")
 
               setTimeout(() => {
@@ -163,6 +164,7 @@ const Layout = ({ children }) => {
 
           <span
             onClick={() => {
+              darken()
               setActive("projectsCard")
 
               setTimeout(() => {
@@ -177,6 +179,7 @@ const Layout = ({ children }) => {
           </span>
           <span
             onClick={() => {
+              darken()
               setActive("contactCard")
 
               setTimeout(() => {
