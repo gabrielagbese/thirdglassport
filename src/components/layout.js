@@ -41,6 +41,9 @@ const Layout = ({ children }) => {
     }
   `)
   useEffect(() => {
+
+    
+  
     var pupils =  document.getElementsByClassName('pupil');
   var pupilsArray = Array.from(pupils);
 
@@ -123,9 +126,7 @@ const Layout = ({ children }) => {
         </div>
         <div className="cardwrapper ">
           <div className="aurora">
-            <div className="ball " id="ball1">
-              l
-            </div>
+            <div className="ball " id="ball1"></div>
           </div>
           <div className="aurora">
             <div className="ball " id="ball2"></div>
@@ -277,12 +278,14 @@ function moveBalls() {
 
 
 function darken() {
-  var cardlight = document.querySelectorAll(".card")
+  var cardlight = document.getElementsByClassName("cardwrapper")[0]
+  console.log(cardlight.style.opacity,"opacity")
   cardlight.style.opacity = 0;
 }
 
 
 function aboutSelect() {
+  darken()
   if (window.innerWidth >= 720) {
     //disapearing colors tween
     tl5.to(".ball", { opacity: 0, duration: 0.1})
@@ -389,6 +392,7 @@ function aboutSelect() {
 }
 
 function projectSelect(){
+  darken()
   if (window.innerWidth >= 720) {
     //disapearing colors tween
     tl5.to(".ball", { opacity: 0, duration: 0.1})
@@ -450,6 +454,7 @@ function projectSelect(){
 }
 
 function contactSelect(){
+  darken()
   if (window.innerWidth >= 720){
     tl5.to(".ball", { opacity: 0, duration: 0.1})
     tl1.fromTo(
