@@ -14,16 +14,18 @@ const Projects = ({fn}) => {
     return(
         <div className="wrapper2 text">
             <div className="content2">
-            <div className="project section abouttext">
+            <div className="project sectionextended abouttext">
                 <div className="projectside">
                     <p className=" bigtext">Projects</p>
+                    <div className="classname"></div>
                 </div>
                 <div className="projectcontent ">
                     <ScrollContainer className="projectswrapper " vertical={false}>
                         <div className="space"></div>
+                        <div className="projectitem blur midtext">project name</div>
                         <div className="projectitem blur"></div>
                         <div className="projectitem blur"></div>
-                        <div className="projectitem blur"></div>
+                        <div className="space2"></div>
                     </ScrollContainer>
                 </div>
             </div>

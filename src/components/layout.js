@@ -6,7 +6,8 @@
  */
 
 import * as React from "react"
-import PropTypes, { number } from "prop-types"
+import { useEffect } from "react"
+import PropTypes, { func, number } from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { FiArrowUpRight } from "react-icons/fi"
 import gsap from "gsap"
@@ -16,14 +17,14 @@ import Draggable from "gsap/Draggable"
 import gif from "../images/gif.gif"
 import ScrollContainer from 'react-indiana-drag-scroll'
 
+
 //import { TimelineMax } from "gsap/gsap-core"
 
 //page components
 import About from "./About"
 // import Hero from "./Hero"
 import Projects from "./Projects"
-// import Contact from "./Contact"
-// import Header from "./header"
+import Contact from "./Contact"
 import Toggle from "./Toggle"
 import "./layout.css"
 
@@ -39,25 +40,92 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  useEffect(() => {
+    var pupils =  document.getElementsByClassName('pupil');
+  var pupilsArray = Array.from(pupils);
+
+  console.log("arr", pupilsArray);
+
+  var input = {
+    mouseX: {
+      start: 0,
+      end: window.innerWidth,
+      current: 0
+    },
+    mouseY: {
+      start: 0,
+      end: window.innerHeight,
+      current: 0
+    }
+  };
+
+  input.mouseX.range = input.mouseX.end - input.mouseX.start;
+  input.mouseY.range = input.mouseY.end - input.mouseY.start;
+
+  var output = {
+    x: {
+      start: -7.5,
+      end: 31.5,
+      current: 0
+    },
+    y: {
+      start: 10,
+      end: 22,
+      current: 0
+    },
+  }
+
+  output.x.range = output.x.end - output.x.start;
+  output.y.range = output.y.end - output.y.start;  
+    
+  var handleMouseMove = function(event) {
+    input.mouseX.current = event.clientX;
+    input.mouseX.fraction = (input.mouseX.current - input.mouseX.start) / input.mouseX.range;
+    
+    input.mouseY.current = event.clientY;
+    input.mouseY.fraction = (input.mouseY.current - input.mouseY.start) / input.mouseY.range;
+    
+    output.x.current = output.x.start + (input.mouseX.fraction * output.x.range);
+    output.y.current = output.y.start + (input.mouseY.fraction * output.y.range);
+    
+    pupilsArray.forEach(function(pupil, k) {
+      pupil.style.transform = 'translate('+output.x.current+'px, '+output.y.current+'px)';
+    })
+  }
+
+  var handleResize = function() {
+    input.mouseX.end = window.innerWidth - 200;
+    input.mouseX.range = input.mouseX.end - input.mouseX.start;
+    
+  }
+
+  window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener('resize', handleResize);
+
+      console.log("eye ran");
+    
+  },);
+  //moveEye();
 
   return (
     <div className="wrapper text">
       <div className="cardlayer">
-        <div className="top">
-          <p className="standin">Eyes</p>
-          <div className="alertwrapper">
-              <Toggle  onClick={() => {
-                popup()
-                console.log("pop")
-              }}/>
-              <div className="alert blur">
-              <img src={gif} alt="we don't do that here" className="gif"/>
-              </div>
+        <div id="anchor" className="top">
+          <div className="eyewrapper">
+            <div className="eye eye1">
+              <div className="pupil"></div>
+            </div>
+            <div className="eye eye2">
+              <div className="pupil"></div>
+            </div>
           </div>
+          {/* <div className="x">X</div> */}
         </div>
         <div className="cardwrapper ">
           <div className="aurora">
-            <div className="ball " id="ball1">l</div>
+            <div className="ball " id="ball1">
+              l
+            </div>
           </div>
           <div className="aurora">
             <div className="ball " id="ball2"></div>
@@ -73,21 +141,19 @@ const Layout = ({ children }) => {
           {/* setup react router */}
           {active === "aboutCard" && <About />}
           {active === "projectsCard" && <Projects />}
+          {active === "contactCard" && <Contact />}
         </div>
 
         {/* nav */}
         <div className="nav">
           <span
-            onClick={() => {    
+            onClick={() => {
               setActive("aboutCard")
-              
+
               setTimeout(() => {
                 aboutSelect()
-                changeColor(" #0000ff","#6b0080")
-                // scrolllayer.style.overflow = "scroll";
-              }, 0.10);
-              
-              
+                changeColor(" #0000ff", "#6b0080", "#0000ff")
+              }, 0.1)
             }}
             className="navspan"
           >
@@ -98,14 +164,11 @@ const Layout = ({ children }) => {
           <span
             onClick={() => {
               setActive("projectsCard")
-              
+
               setTimeout(() => {
-                //shift()
-                
                 projectSelect()
-                changeColor(" #11d9ff","#3322ff")
-                // scrolllayer.style.overflow = "scroll";
-              }, 0.010);
+                changeColor("#3322ff", "#11d9ff", "#3322ff")
+              }, 0.01)
             }}
             className="navspan"
           >
@@ -114,7 +177,12 @@ const Layout = ({ children }) => {
           </span>
           <span
             onClick={() => {
-              aboutSelect()
+              setActive("contactCard")
+
+              setTimeout(() => {
+                contactSelect()
+                changeColor("#11d9ff", "#3322ff", "#dc0080")
+              }, 0.01)
             }}
             className="navspan"
           >
@@ -127,16 +195,18 @@ const Layout = ({ children }) => {
   )
 }
 
+//eyeball
+
+
+
 //movement
-
-
-function changeColor(color1,color2) {
+function changeColor(color1,color2,color3) {
   var ball1 = document.getElementById("ball1");
   var ball2 = document.getElementById("ball2");
-  var colorIntensity = "75";  
+  var colorIntensity = "76";  
 
-  ball1.style.background = "linear-gradient(to left, " + color1+ colorIntensity +","+color2 + colorIntensity +")";
-  ball2.style.background = "linear-gradient(to left, " + color1+ colorIntensity +","+color2 + colorIntensity +")";
+  ball1.style.background = "linear-gradient(to left, " + color1+ colorIntensity +","+color2 + colorIntensity +","+color3 + colorIntensity +")";
+  ball2.style.background = "linear-gradient(to left, " + color1+ colorIntensity +","+color2 + colorIntensity +","+color3 + colorIntensity +")";
 
   console.log("color changed")
 }
@@ -183,6 +253,7 @@ var tl14 = gsap.timeline()
 
 var tl15 = gsap.timeline();
 var tl16 = gsap.timeline();
+var tl17 = gsap.timeline();
 
 
 function firstMoveBalls() {
@@ -212,12 +283,16 @@ function aboutSelect() {
     //disapearing colors tween
     tl5.to(".ball", { opacity: 0, duration: 0.1})
 
-
+    // tl17.fromTo(".x",
+    //   {opacity: 0.3, x:"100%"},
+    //   {opacity: 1, duration: 1, x: "0%",duration:2,}
+    // )
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
       { opacity: 1, duration: 1, y: "0%" }
     )
+    tl1.to(".eyewrapper",{opacity: 0.8})
     tl2.fromTo(
       ".links",
       { opacity: 0.3, x: "-100%" },
@@ -232,7 +307,7 @@ function aboutSelect() {
     tl7.fromTo(".subcard3", { opacity: 0.3 }, { opacity: 1 })
     tl9.fromTo(
       ".biotext",
-      { opacity: 0.3, y: "-100%" },
+      { opacity: 0, y: "100%" },
       { opacity: 1, duration: 2, ease: "power2", y: "0%" }
     )
     tl10.fromTo(
@@ -241,7 +316,7 @@ function aboutSelect() {
       { opacity: 1, duration: 2, ease: "power2", y: "0%" }
     )
     tl11.fromTo(
-      ".secondskills",
+      ".swaptab",
       { opacity: 0.3, x: "100%" },
       { opacity: 1, duration: 2, ease: "power2", x: "0%" }
     )
@@ -251,7 +326,7 @@ function aboutSelect() {
       { opacity: 1, duration: 2, ease: "power2", x: "0%" }
     )
     tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
-
+    tl1.fromTo(".classname",{opacity: 0},{opacity: 1})
     firstMoveBalls();
     
       
@@ -269,12 +344,12 @@ function aboutSelect() {
     tl2.fromTo(
       ".links",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 3, ease: "power2", y: "0%" }
     )
     tl3.fromTo(
       ".subcard3",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 3, ease: "power2", x: "0%" }
     )
     //tl4.fromTo(".line", {opacity: 0.3, y: "-100%  ",},{opacity: 1, duration: 2.75,ease:"power2", y: "0%"});
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
@@ -283,17 +358,17 @@ function aboutSelect() {
     tl9.fromTo(
       ".biotext",
       { opacity: 0.3, y: "-100%" },
-      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 3, ease: "power2", y: "0%" }
     )
     tl10.fromTo(
       ".firstskills",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 3, ease: "power2", y: "0%" }
     )
     tl11.fromTo(
-      ".secondskills",
+      ".swaptab",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 3, ease: "power2", x: "0%" }
     )
     tl12.fromTo(
       ".bio",
@@ -301,7 +376,10 @@ function aboutSelect() {
       { opacity: 1, duration: 2, ease: "power2", x: "0%" }
     )
     tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
-
+    setTimeout(() => {
+      tl1.fromTo(".classname",{opacity: 0},{opacity: 1, duration: 3 })
+    }, 3000);
+    
     firstMoveBalls()
   }
 }
@@ -315,6 +393,7 @@ function projectSelect(){
       { opacity: 0.3, y: "100%" },
       { opacity: 1, duration: 1, y: "0%" }
     )
+    tl1.to(".eyewrapper",{opacity: 0.8})
 
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     
@@ -322,16 +401,19 @@ function projectSelect(){
     tl15.fromTo(
       ".projectcontent",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 1, x: "0%" }
+      { opacity: 1, duration: 2, x: "0%" }
     )
 
     tl15.fromTo(
       ".projectside",
-      { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 2, x: "0%" }
+      { opacity: 0, x: "-75%" },
+      { opacity: 1, duration: 1, x: "0%" }
     )
     tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 3 })
     firstMoveBalls()
+    setTimeout(() => {
+      tl1.fromTo(".classname",{opacity: 0},{opacity: 1, duration: 3 })
+    }, 3000);
 
   }else{
     //disapearing colors tween
@@ -347,19 +429,58 @@ function projectSelect(){
     tl15.fromTo(
       ".projectcontent",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 1, x: "0%" }
+      { opacity: 1, duration: 2, x: "0%" }
     )
 
     tl15.fromTo(
       ".projectside",
-      { opacity: 0.3, y: "-100%" },
-      { opacity: 1, duration: 1.5, y: "0%" }
+      { opacity: 0,  },
+      { opacity: 1, duration: 1,}
     )
-    tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 3 })
+    tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 3 });
+    setTimeout(() => {
+      tl1.fromTo(".classname",{opacity: 0},{opacity: 1, duration: 3 })
+    }, 3000);
     firstMoveBalls()
   }
 }
 
+function contactSelect(){
+  if (window.innerWidth >= 720){
+    tl5.to(".ball", { opacity: 0, duration: 0.1})
+    tl1.fromTo(
+      ".cardwrapper",
+      { opacity: 0.3, y: "100%" },
+      { opacity: 1, duration: 1, y: "0%" }
+    )
+    tl1.to(".eyewrapper",{opacity: 0.8})
+    tl1.fromTo(".contactside",
+      { opacity: 0, },
+      { opacity: 1, duration: 1,})
+    tl1.fromTo(".contactcontent",
+      { opacity: 0.3, y: "100%" },
+      { opacity: 1, duration: 1, y: "0%" })
+
+    tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
+    firstMoveBalls()
+  }else{
+    tl5.to(".ball", { opacity: 0, duration: 0.1})
+    tl1.fromTo(
+      ".cardwrapper",
+      { opacity: 0.3, y: "100%" },
+      { opacity: 1, duration: 1, y: "0%" }
+    )
+    tl1.fromTo(".contactside",
+      { opacity: 0, },
+      { opacity: 1, duration: 1,})
+    tl1.fromTo(".contactcontent",
+      { opacity: 0.3, y: "100%" },
+      { opacity: 1, duration: 1, y: "0%" })
+
+    tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
+    firstMoveBalls()
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
