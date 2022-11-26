@@ -177,7 +177,7 @@ const Layout = ({ children }) => {
             }}
             className="navspan"
           >
-            <h1 className="text navitem">Projects 2</h1>
+            <h1 className="text navitem">Projects</h1>
             <FiArrowUpRight className="arrow" />
           </span>
           <span
