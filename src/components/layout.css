@@ -1245,6 +1245,18 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 
+@media (min-width: 0px) {
+  .eye {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .eye {
+    display: block;
+  }
+}
+
 .pupil {
   background: rgba(255, 255, 255, 0.242);
   width: 20px;
@@ -1290,6 +1302,23 @@ input:checked + .slider:before {
   scale: 1 0.92;
   -webkit-transform: rotate(10deg) translatex(-50%);
           transform: rotate(10deg) translatex(-50%);
+}
+
+@media (min-width: 0px) {
+  .x {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translateY(-65%);
+            transform: translateY(-65%);
+  }
+}
+
+@media (min-width: 960px) {
+  .x {
+    -webkit-transform: translatex(200%);
+            transform: translatex(200%);
+    display: none;
+  }
 }
 
 .contact {

@@ -1017,6 +1017,12 @@
 //   margin-left: -100px;
 //   margin-top: -100px;
   overflow: hidden;
+  @include xs{
+    display: none;
+    };
+    @include lg{
+        display: block;
+    };
 }
 .pupil {
   background: rgba(255, 255, 255, 0.242);
@@ -1045,6 +1051,7 @@
     align-items: center;
     justify-content: space-between;
     //border: thin solid red;
+    
 }
 
 .eyewrapper:hover .eye1{
@@ -1056,6 +1063,19 @@
 .eyewrapper:hover .eye2{
     scale: 1 0.92;
     transform: rotate(10deg) translatex(-50%) ;
+}
+
+.x{
+    
+    @include xs{
+        display: block;
+        opacity: 1;
+        transform: translateY(-65%)
+    };
+    @include lg{
+        transform: translatex(200%);
+        display: none;
+    };
 }
 
 .contact{

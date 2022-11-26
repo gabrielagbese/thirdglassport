@@ -21,14 +21,14 @@ import ScrollContainer from "react-indiana-drag-scroll"
 
 //page components
 import About from "./About"
-// import Hero from "./Hero"
+import Hero from "./Hero"
 import Projects from "./Projects"
 import Contact from "./Contact"
 import Toggle from "./Toggle"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const [active, setActive] = useState("aboutCard")
+  const [active, setActive] = useState("heroCard")
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -111,15 +111,27 @@ const Layout = ({ children }) => {
     <div className="wrapper text">
       <div className="cardlayer">
         <div id="anchor" className="top">
-          <div className="eyewrapper">
+          <div className="eyewrapper" onClick={() => {
+              darken()
+              setActive("heroCard")
+			  var tl19 = gsap.timeline()
+			  tl19.to(".eyewrapper", { opacity: 0 })
+            //   var contentlight = document.getElementsByClassName("content")[0]
+            //   contentlight.style.opacity = 1
+            //   setTimeout(() => {
+            //     aboutSelect()
+            //     changeColor(" #0000ff", "#6b0080", "#0000ff")
+            //   }, 0.1)
+            }}>
             <div className="eye eye1">
               <div className="pupil"></div>
             </div>
             <div className="eye eye2">
               <div className="pupil"></div>
             </div>
+			<div className="x">X</div>
           </div>
-          {/* <div className="x">X</div> */}
+          
         </div>
         <div className="cardwrapper ">
 			<div className="aurora">
@@ -137,6 +149,7 @@ const Layout = ({ children }) => {
       <div className="contentlayer">
         <div className="content">
           {/* setup react router */}
+		  {active === "heroCard" && <Hero />}
           {active === "aboutCard" && <About />}
           {active === "projectsCard" && <Projects />}
           {active === "contactCard" && <Contact />}
@@ -361,6 +374,7 @@ function aboutSelect() {
       { opacity: 0.3, y: "100%" },
       { opacity: 1, duration: 1.5, y: "0%" }
     )
+	tl1.to(".eyewrapper", { opacity: 0.8 })
     tl2.fromTo(
       ".links",
       { opacity: 0.3, y: "100%" },
@@ -443,6 +457,8 @@ function projectSelect() {
       { opacity: 1, duration: 1.5, y: "0%" }
     )
 
+	tl1.to(".eyewrapper", { opacity: 0.8 })
+
     tl6.fromTo(".visible", { opacity: 0 }, { opacity: 1 })
     //tl6.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1.5 })
     tl15.fromTo(
@@ -470,11 +486,11 @@ function contactSelect() {
       { opacity: 1, duration: 1.5, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
-    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 1.5 })
+    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 0.5 })
     tl1.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1.5, y: "0%" }
+      { opacity: 1, duration: 1, y: "0%" }
     )
     tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 
@@ -487,11 +503,13 @@ function contactSelect() {
       { opacity: 0.3, y: "100%" },
       { opacity: 1, duration: 1.5, y: "0%" }
     )
-    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 1.5 })
+
+	tl1.to(".eyewrapper", { opacity: 0.8 })
+    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 0.5 })
     tl1.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1.5, y: "0%" }
+      { opacity: 1, duration: 1, y: "0%" }
     )
     tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 
