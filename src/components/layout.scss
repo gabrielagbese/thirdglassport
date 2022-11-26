@@ -209,8 +209,6 @@
 }
 
 .top {
-    
-    height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -223,11 +221,13 @@
     //border: thin solid red;
 
     @include xs {
-        width: 90%;
-    }
+        width: 90%; 
+        height: 0;
+    };
     @include lg {
         width: 80%;
-    }
+        height: 10%;
+    };
 }
 
 .standin {
@@ -315,8 +315,7 @@
     //backdrop-filter: blur(55px);
     backface-visibility: hidden;
     perspective: 1000;
-    transform: translate3d(0, 0, 0);
-    transform: translateZ(0);
+    
     border: 2.5px solid rgba(255, 255, 255, 0.2);
     border-right: rgba(255, 255, 255, 0.4);
     border-bottom: rgba(255, 255, 255, 0.4);
@@ -438,7 +437,7 @@
 
     @include xs {
         margin-left: 5%;
-        margin-top: 12vh;
+        margin-top: 8vh;
         width: 91.6%;
         height: 86%;
         overflow-x: hidden;
@@ -459,7 +458,7 @@
 
     @include xs {
         margin-left: 5%;
-        margin-top: 12vh;
+        margin-top: 8vh;
         width: 91.6%;
         height: 90%;
     }
@@ -556,7 +555,7 @@
     //         rgba(63, 61, 61, 0.011) 5%,
     //         rgba(104, 99, 99, 0.211));
     
-    box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.5);
     @include xs{
         border: 1px solid rgba(178, 164, 135, 0.219);
     };
@@ -1131,12 +1130,13 @@
     border-top: 2px solid rgba(255, 255, 255, 0.125);
     border-left: 2px solid rgba(255, 255, 255, 0.125);
     border-right: 2px solid rgba(255, 255, 255, 0.125);
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
     //background-color: rgba(255, 255, 255, 0.055);
     @include xs{
         align-self: center;
         width: 95%;
-        height: 71%;
-        margin-top: 10%;
+        height: 80%;
+        margin-top: 20%;
         border-radius: 15px 15px 0 0 ;
         background-color: rgba(0, 0, 0, 0.175);
     };
