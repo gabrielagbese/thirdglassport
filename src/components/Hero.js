@@ -24,7 +24,7 @@ const Hero = ({fn}) => {
                         <p className="shorttext">I specializing in designing and building unique digital experiences.</p>
                         <div className="opportunities blur">
                             <p className="available">Available for:</p>
-                            <div className="opportunityname blur">Internship</div>
+                            <div className="opportunityname blur">Internships</div>
                             
                         </div>
                     </div>
