@@ -16,7 +16,19 @@ const Hero = ({fn}) => {
     return(
         <div className="wrapper2 text">
             <div className="content2">
-               hero
+               <div className="hero">
+                    <div className="herowrapper">
+                        <p className="hellotext"></p>
+                        <p className="nametext">Gabriel Agbese</p>
+                        <p className="roletext">Creative <span className="gradienttext">Frontend</span> Developer</p>
+                        <p className="shorttext">I specializing in designing and building unique digital experiences.</p>
+                        <div className="opportunities blur">
+                            <p className="available">Available for:</p>
+                            <div className="opportunityname blur">Internship</div>
+                            
+                        </div>
+                    </div>
+               </div>
             </div>
         </div>
     )

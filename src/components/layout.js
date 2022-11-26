@@ -15,6 +15,7 @@ import { useState } from "react"
 import memoji from "../images/mem.png"
 import Draggable from "gsap/Draggable"
 import gif from "../images/gif.gif"
+import {AiOutlineClose} from "react-icons/ai"
 import ScrollContainer from "react-indiana-drag-scroll"
 
 //import { TimelineMax } from "gsap/gsap-core"
@@ -129,7 +130,9 @@ const Layout = ({ children }) => {
             <div className="eye eye2">
               <div className="pupil"></div>
             </div>
-			<div className="x">X</div>
+			<div className="x">
+				<AiOutlineClose/>
+			</div>
           </div>
           
         </div>
@@ -457,11 +460,11 @@ function projectSelect() {
       { opacity: 1, duration: 1.5, y: "0%" }
     )
 
-	tl1.to(".eyewrapper", { opacity: 0.8 })
+	tl15.to(".eyewrapper", { opacity: 0.8 })
 
     tl6.fromTo(".visible", { opacity: 0 }, { opacity: 1 })
     //tl6.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1.5 })
-    tl15.fromTo(
+    tl1.fromTo(
       ".projectcontent",
       { opacity: 0.3, x: "100%" },
       { opacity: 1, duration: 1.5, x: "0%" }
