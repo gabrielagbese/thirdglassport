@@ -307,47 +307,47 @@ function aboutSelect() {
 
     // tl17.fromTo(".x",
     //   {opacity: 0.3, x:"100%"},
-    //   {opacity: 1, duration: 1, x: "0%",duration:2,}
+    //   {opacity: 1, duration: 1.5, x: "0%",duration:2,}
     // )
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.5, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
     tl2.fromTo(
       ".links",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
     )
     tl3.fromTo(
       ".subcard3",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
     )
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     tl7.fromTo(".subcard3", { opacity: 0.3 }, { opacity: 1 })
     tl9.fromTo(
       ".biotext",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 1.5, ease: "power2", y: "0%" }
     )
     tl10.fromTo(
       ".firstskills",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 1.5, ease: "power2", y: "0%" }
     )
     tl11.fromTo(
       ".swaptab",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
     )
     tl12.fromTo(
       ".bio",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
     )
-    tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1.5 })
     tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1 })
     firstMoveBalls()
   }
@@ -359,7 +359,7 @@ function aboutSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.5, y: "0%" }
     )
     tl2.fromTo(
       ".links",
@@ -371,7 +371,7 @@ function aboutSelect() {
       { opacity: 0.3, x: "-100%" },
       { opacity: 1, duration: 2, ease: "power2", x: "0%" }
     )
-    //tl4.fromTo(".line", {opacity: 0.3, y: "-100%  ",},{opacity: 1, duration: 1.75,ease:"power2", y: "0%"});
+    //tl4.fromTo(".line", {opacity: 0.3, y: "-100%  ",},{opacity: 1, duration: 1.5.75,ease:"power2", y: "0%"});
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     tl7.fromTo(".subcard3", { opacity: 0.3 }, { opacity: 1 })
     //tl8.fromTo(".line", {opacity: 0.3}, {opacity: 1})
@@ -393,9 +393,9 @@ function aboutSelect() {
     tl12.fromTo(
       ".bio",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
     )
-    tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1.5 })
     setTimeout(() => {
       tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 2 })
     }, 3000)
@@ -412,7 +412,7 @@ function projectSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.5, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
 
@@ -421,13 +421,13 @@ function projectSelect() {
     tl15.fromTo(
       ".projectcontent",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 1, x: "0%" }
+      { opacity: 1, duration: 1.5, x: "0%" }
     )
 
     tl15.fromTo(
       ".projectside",
       { opacity: 0, x: "-75%" },
-      { opacity: 1, duration: 1, x: "0%" }
+      { opacity: 1, duration: 1.5, x: "0%" }
     )
     tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
     firstMoveBalls()
@@ -440,18 +440,18 @@ function projectSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.5, y: "0%" }
     )
 
     tl6.fromTo(".visible", { opacity: 0 }, { opacity: 1 })
-    //tl6.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
+    //tl6.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1.5 })
     tl15.fromTo(
       ".projectcontent",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 1, x: "0%" }
+      { opacity: 1, duration: 1.5, x: "0%" }
     )
 
-    tl15.fromTo(".projectside", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl15.fromTo(".projectside", { opacity: 0 }, { opacity: 1, duration: 1.5 })
     tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
     setTimeout(() => {
       tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 2 })
@@ -467,16 +467,16 @@ function contactSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.5, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
-    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 1.5 })
     tl1.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.5, y: "0%" }
     )
-    tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     firstMoveBalls()
@@ -485,15 +485,15 @@ function contactSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.5, y: "0%" }
     )
-    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 1.5 })
     tl1.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.5, y: "0%" }
     )
-    tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     firstMoveBalls()

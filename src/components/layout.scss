@@ -131,7 +131,7 @@
         background-image: linear-gradient(to bottom,
                 rgba(44, 44, 44, 0777) rgba(44, 44, 44, 0.655));
         backdrop-filter: blur(20px);
-        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.55);
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.95);
     }
 }
 
@@ -439,7 +439,7 @@
         margin-left: 5%;
         margin-top: 8vh;
         width: 91.6%;
-        height: 86%;
+        height: 89.75%;
         overflow-x: hidden;
     }
 
@@ -447,7 +447,7 @@
         margin-left: 10%;
         margin-top: 13vh;
         width: 80%;
-        height: 86.25%;
+        height: 84.9%;
         //margin-top: -1px;
     }
 }
@@ -460,14 +460,14 @@
         margin-left: 5%;
         margin-top: 8vh;
         width: 91.6%;
-        height: 90%;
+        height: 89.75%;
     }
 
     @include lg {
         margin-left: 10%;
         margin-top: 13vh;
         width: 90%;
-        height: 85%;
+        height: 84%;
     }
 }
 
@@ -938,6 +938,7 @@
 .projectswrapper{
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     
     width: 150%;
 
@@ -948,7 +949,7 @@
     @include lg{
         padding-right: 0%;
         margin-left: 5px;
-        height: 100%;
+        height: 98%;
     };
     
 }
@@ -965,7 +966,7 @@
         height: 95%;
     };
     @include lg{
-        min-width: 40%; 
+        min-width: 30%; 
         height: 90%;
     };
 }
@@ -993,7 +994,7 @@
         height: 30px;
     };
     @include lg{
-        min-width: 15%;
+        min-width: 20%;
         height: 30px;
     };
 }
