@@ -318,36 +318,36 @@ function aboutSelect() {
     tl2.fromTo(
       ".links",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
     )
     tl3.fromTo(
       ".subcard3",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
     )
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     tl7.fromTo(".subcard3", { opacity: 0.3 }, { opacity: 1 })
     tl9.fromTo(
       ".biotext",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 1, ease: "power2", y: "0%" }
     )
     tl10.fromTo(
       ".firstskills",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 1, ease: "power2", y: "0%" }
     )
     tl11.fromTo(
       ".swaptab",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
     )
     tl12.fromTo(
       ".bio",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
     )
-    tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
+    tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
     tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1 })
     firstMoveBalls()
   }
@@ -364,40 +364,40 @@ function aboutSelect() {
     tl2.fromTo(
       ".links",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 3, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
     )
     tl3.fromTo(
       ".subcard3",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 3, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
     )
-    //tl4.fromTo(".line", {opacity: 0.3, y: "-100%  ",},{opacity: 1, duration: 2.75,ease:"power2", y: "0%"});
+    //tl4.fromTo(".line", {opacity: 0.3, y: "-100%  ",},{opacity: 1, duration: 1.75,ease:"power2", y: "0%"});
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     tl7.fromTo(".subcard3", { opacity: 0.3 }, { opacity: 1 })
     //tl8.fromTo(".line", {opacity: 0.3}, {opacity: 1})
     tl9.fromTo(
       ".biotext",
       { opacity: 0.3, y: "-100%" },
-      { opacity: 1, duration: 3, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
     )
     tl10.fromTo(
       ".firstskills",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 3, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
     )
     tl11.fromTo(
       ".swaptab",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 3, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
     )
     tl12.fromTo(
       ".bio",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 2, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 1, ease: "power2", x: "0%" }
     )
-    tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
+    tl13.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
     setTimeout(() => {
-      tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 3 })
+      tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 2 })
     }, 3000)
 
     firstMoveBalls()
@@ -421,7 +421,7 @@ function projectSelect() {
     tl15.fromTo(
       ".projectcontent",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 2, x: "0%" }
+      { opacity: 1, duration: 1, x: "0%" }
     )
 
     tl15.fromTo(
@@ -429,10 +429,10 @@ function projectSelect() {
       { opacity: 0, x: "-75%" },
       { opacity: 1, duration: 1, x: "0%" }
     )
-    tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 3 })
+    tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
     firstMoveBalls()
     setTimeout(() => {
-      tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 3 })
+      tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 2 })
     }, 3000)
   } else {
     //disapearing colors tween
@@ -444,17 +444,17 @@ function projectSelect() {
     )
 
     tl6.fromTo(".visible", { opacity: 0 }, { opacity: 1 })
-    //tl6.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
+    //tl6.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
     tl15.fromTo(
       ".projectcontent",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 2, x: "0%" }
+      { opacity: 1, duration: 1, x: "0%" }
     )
 
     tl15.fromTo(".projectside", { opacity: 0 }, { opacity: 1, duration: 1 })
-    tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 3 })
+    tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
     setTimeout(() => {
-      tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 3 })
+      tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 2 })
     }, 3000)
     firstMoveBalls()
   }
