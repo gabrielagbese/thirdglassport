@@ -17,17 +17,23 @@ const Hero = ({fn}) => {
         <div className="wrapper2 text">
             <div className="content2">
                <div className="hero">
-                    <div className="herowrapper">
-                        <p className="hellotext"></p>
-                        <p className="nametext">Gabriel Agbese</p>
-                        <p className="roletext">Creative <span className="gradienttext">Frontend</span> Developer</p>
-                        <p className="shorttext">I specializing in designing and building unique digital experiences.</p>
-                        <div className="opportunities blur">
-                            <p className="available">Available for:</p>
-                            <div className="opportunityname blur">Internships</div>
-                            
-                        </div>
+                    <div className="hero-underlier">
+                        <div className="hero-light"></div>
                     </div>
+                    <div className="herowrapper ">
+                        <div className="top-space"></div>
+                        <div className="hey-there">Hey there, I'm-</div>
+                        <div className="first-name">Gabriel</div>
+                        <div className="description">Frontend Developer,<span className="darker"> specializing in custom layouts</span></div>
+                        <div className="opportunity">Open to Internship opportunities</div>
+                        <div className="hero-links">
+                            <div className="link blur">Github</div>
+                            <div className="link blur">LinkedIn</div>
+                            <div className="link blur">Email</div>
+                        </div>
+                        <div className="planet"></div>
+                    </div>
+                    
                </div>
             </div>
         </div>

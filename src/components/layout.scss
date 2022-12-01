@@ -7,7 +7,7 @@
 
 ::-webkit-scrollbar-track {
     border-radius: 3px;
-    box-shadow: inset 0 0 10px rgba(155, 155, 155, 0.15);
+    box-shadow: inset 0 0 10px rgba(155, 155, 155, 0.25);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -34,7 +34,7 @@
     color: white;
     background-color: #000000;
     //background-color: skyblue;
-    height: 100%;
+    height: 100dvh;
     width: 100%;
     overflow: hidden;
     scrollbar-width: 0;
@@ -312,35 +312,78 @@
 .hero{
     //border: thin solid red;
     width: 99.7%;
-    height: 99%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     
 }
 
-.herowrapper{
-    //border: thin solid red;
+.hero-underlier{
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-
+    justify-content: flex-end;
+    //background-color: #2195f33f;
     @include xs{
+        margin-top: 10%;
         width: 100%;
-        height: 85%;
+        height: 95%;
     };
     @include md{
         width: 75%;
         height: 65%;
     };
     @include lg{
-        margin-top: 5%;
+        margin-top: 0.5%;
         scale: 1.05;
-        width: 60%;
+        width: 80%;
+        height: 95%;
+    };
+}
+
+.hero-light{
+    width: 80%;
+    
+    filter: blur(170px);
+    @include xs{
+        height: 70%;
+        border-radius: 50% 50% 0% 0%;
+        background-color: #1451833a;
+    };
+    @include lg{
         height: 50%;
+        border-radius: 60% 60% 0% 0%;
+        background-color: #1451832a;
+    }
+}
+
+.herowrapper{
+    z-index: 3;
+    //border: thin solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+    text-align: center;
+
+    @include xs{
+        margin-top: 10%;
+        width: 100%;
+        height: 95%;
+    };
+    @include md{
+        width: 75%;
+        height: 65%;
+    };
+    @include lg{
+        margin-top: 0.5%;
+        scale: 1.05;
+        width: 80%;
+        height: 95%;
     };
 }
 
@@ -376,92 +419,130 @@
         transform: translate(15%,-15%)
     };
 }
-.nametext{
-    font-weight: 600;
-    @include xs{
-        font-size: 3.75rem;
-        line-height: 3rem;
-        margin-bottom: 7%;
-    };
-    @include md{
-        font-size: 5rem;
-        line-height: 5rem;
-        margin-bottom: 1%;
-    };
-    @include lg{
-        font-size: 5rem;
-    };
-}
-.roletext{
-    font-weight: 500;
 
+.top-space{
+    //border: thin solid red;
+    width: 100%;
     @include xs{
-        font-size: 2rem;
-        line-height: 2rem;
-        margin-bottom: 7%;
-        
+        height: 15vh;
     };
     @include md{
-        font-size: 3rem;
-        line-height: 3rem;
-        margin-bottom: 1%;
         
     };
     @include lg{
-        font-size: 2.5rem;
-        
-    };
-}
-.gradienttext{
-    background: linear-gradient(to right, rgb(65, 65, 135), #8e478e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.shorttext{
-    opacity: 0.65;
-    font-weight: 200;
-    padding: 0% 5% 0% 5%;
-    @include xs{
-        font-size: 1.25rem;
-        margin-bottom: 7%;
-    };
-    @include md{
-        font-size: 1.5rem;
-        margin-bottom: 1%;
-    };
-    @include lg{
-        font-size: 1.5rem;
+        height: 25vh;
     };
 }
 
-.opportunities{
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-    @include xs{
-        width: auto;
-        height: auto;
-        padding: 3% 10%;
-    };
-    @include lg{
-        width: auto;
-        height: auto;
-        padding: 1% 3%;
-    };
-}
-.opportunityname{
-    color: rgba(255, 255, 255, 0.75);
+.hey-there{
+    //border: thin solid red;
+    width: 100%;
+    height: 3vh;
     font-size: 1.5rem;
-    width: auto;
+    font-weight: 600;
+}
+
+.first-name{
+    //border: thin solid red;
+    height: 15vh;
+    width: 100%;
+    font-size: 6rem;
+    font-weight: 700;
+    justify-self: flex-start;
+}
+
+.description{
+    
+    
+    width: 100%;
+    height: 6vh;
+    font-weight: 500;
+    @include xs{
+        font-size: 1.35rem;
+        margin-top: 0.5%;
+    };
+    @include lg{
+        font-size: 1.75rem;
+        margin-top: 0.5%;
+    };
+}
+.darker{
+    opacity: 0.5;
+}
+
+.opportunity{
+    //border: thin solid red;
+    width: 100%;
+    @include xs{       
+        margin-top: 5%;
+        font-size: 1.35rem;
+    };
+    @include lg{
+        margin-top: 0.5%;
+        font-size: 1.5rem;
+    };
+}
+
+.opportunity-larger{
+    font-size: 1.5rem;
+    //font-size: 1rem;
+    padding: 7.5px;
+}
+
+.hero-links{
+    
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    //border: thin solid red;
+    align-items: center;
+    justify-content: space-between;
+
+    @include xs{
+        width: 90%;
+        padding-top: 3.5vh;
+    };
+    @include lg{
+        width: 40%;
+        margin-bottom: -5%;
+    }
+}
+
+.link{
+    cursor: pointer;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
     height: auto;
-    padding: 5% 10%;
+    padding: 5px;
+    @include xs{
+        width: 27.5%;
+    };
+    @include lg{
+        width: 21%;
+    }
 }
-.available{
-    margin-bottom: 1%;
-    color: rgba(255, 255, 255, 0.5);
+
+.planet{
+    z-index: 1;
+    @include xs{
+        width: 60vh;
+        height: 20vh;
+        transform: translateY(40%);
+        border-radius: 50% 50% 50% 50%;
+        border: 1.5px solid #14599296;
+        background-image: linear-gradient(to bottom  , #1a5d9423 , black 50%);
+    };
+    @include lg{
+        width: 100vh;
+        height: 35vh;
+        transform: translateY(67.5%);
+        border-radius: 50% 50% 50% 50%;
+        border: 1.5px solid #14599296;
+        background-image: linear-gradient(to bottom  , #1a5d9423 , black 50%);
+    };
 }
+
 
 .card {
     //backdrop-filter: blur(55px);
@@ -474,7 +555,7 @@
     
     @include xs {
         background: linear-gradient(-135deg,
-                rgba(227, 206, 206, 0.171) 5%,
+                rgba(227, 206, 206, 0.271) 5%,
                 rgba(31, 31, 31, 0.344));
         //background-color: rgba(255, 255, 255, 0.051);
         //background: linear-gradient(to right , rgba(0, 128, 0, 0.621) 15%,  rgba(53, 154, 42, 0.33) 55%, rgba(0, 128, 0, 0.286));
@@ -485,7 +566,7 @@
 
     @include lg {
         background: linear-gradient(-135deg,
-                rgba(227, 206, 206, 0.161) 5%,
+                rgba(227, 206, 206, 0.261) 5%,
                 rgba(0, 0, 0, 0.344));
         //background-color: rgba(255, 255, 255, 0.051);
         //background: linear-gradient(to right , rgba(0, 128, 0, 0.621) 20%,  black 55%,rgba(0, 128, 0, 0.286));
