@@ -376,10 +376,18 @@
 
 .stars{
     background:  url(https://i.imgur.com/PDOw7k2.png);
-    width: 90%;
-    opacity: 0.45;
-    transform: translateX(-25%);
+    
     height: 70%;
+    @include xs{
+        transform: translateX(-10%);
+        width: 120%;
+        opacity: 0.85;
+    };
+    @include md{
+        transform: translateX(-25%);
+        width: 90%;
+        opacity: 0.45;
+    }
     //z-index: 4;
 }
 

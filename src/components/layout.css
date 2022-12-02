@@ -480,11 +480,25 @@
 
 .stars {
   background: url(https://i.imgur.com/PDOw7k2.png);
-  width: 90%;
-  opacity: 0.45;
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
   height: 70%;
+}
+
+@media (min-width: 0px) {
+  .stars {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    width: 120%;
+    opacity: 0.85;
+  }
+}
+
+@media (min-width: 720px) {
+  .stars {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+    width: 90%;
+    opacity: 0.45;
+  }
 }
 
 .twinkling {
