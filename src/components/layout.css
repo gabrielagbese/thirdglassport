@@ -552,26 +552,6 @@
 }
 
 @media (min-width: 0px) {
-  .hellotext {
-    font-size: 1.5rem;
-    margin-bottom: 7%;
-  }
-}
-
-@media (min-width: 720px) {
-  .hellotext {
-    font-size: 1.5rem;
-    margin-bottom: 1%;
-  }
-}
-
-@media (min-width: 960px) {
-  .hellotext {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 0px) {
   .memoji {
     width: calc(100% - 10px);
     height: auto;
@@ -631,7 +611,7 @@
 @media (min-width: 0px) {
   .first-name {
     font-size: 3rem;
-    height: 9.5vh;
+    height: 7.5vh;
   }
 }
 
