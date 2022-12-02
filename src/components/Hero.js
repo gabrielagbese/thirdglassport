@@ -28,7 +28,7 @@ const Hero = ({ fn }) => {
                     <div className="herowrapper ">
                         <div className="top-space"></div>
                         <div className="hey-there">Hello there, I'm-</div>
-                        <div className="first-name">Gabriel</div>
+                        <div className="first-name">Gabriel Agbese</div>
                         <div className="description">Frontend Developer,<span className="darker"> specializing in custom layouts</span></div>
                         <div className="opportunity">
                             <p>Open to&ensp; </p>
