@@ -737,7 +737,7 @@
 
 @media (min-width: 0px) {
   .planet {
-    width: 80vh;
+    width: 70vh;
     height: 20vh;
     -webkit-transform: translateY(45%);
             transform: translateY(45%);
