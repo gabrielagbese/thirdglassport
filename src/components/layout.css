@@ -451,6 +451,7 @@
 
 .hero-light {
   width: 80%;
+  position: relative;
   -webkit-filter: blur(170px);
           filter: blur(170px);
 }
@@ -459,7 +460,7 @@
   .hero-light {
     height: 70%;
     border-radius: 50% 50% 0% 0%;
-    background-color: #1451833a;
+    background-color: #1451834d;
   }
 }
 
@@ -467,8 +468,32 @@
   .hero-light {
     height: 50%;
     border-radius: 60% 60% 0% 0%;
-    background-color: #1451832a;
+    background-color: #1451833d;
   }
+}
+
+.hero-stars {
+  position: absolute;
+  width: 70%;
+  height: 60%;
+}
+
+.stars {
+  background: url(https://i.imgur.com/PDOw7k2.png);
+  width: 90%;
+  opacity: 0.5;
+  height: 70%;
+}
+
+.twinkling {
+  background: transparent url(https://i.imgur.com/aljoapq.png) repeat top center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0.1;
+  width: 100%;
+  height: 70%;
+  -webkit-animation: move-twink-back 200s linear infinite;
+          animation: move-twink-back 200s linear infinite;
 }
 
 .herowrapper {
@@ -583,9 +608,20 @@
 .first-name {
   height: 15vh;
   width: 100%;
-  font-size: 6rem;
   font-weight: 700;
   justify-self: flex-start;
+}
+
+@media (min-width: 0px) {
+  .first-name {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .first-name {
+    font-size: 6rem;
+  }
 }
 
 .description {
@@ -596,7 +632,7 @@
 
 @media (min-width: 0px) {
   .description {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     margin-top: 0.5%;
   }
 }
@@ -619,7 +655,7 @@
 @media (min-width: 0px) {
   .opportunity {
     margin-top: 5%;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -656,6 +692,7 @@
   .hero-links {
     width: 90%;
     padding-top: 3.5vh;
+    scale: 0.8;
   }
 }
 
@@ -663,6 +700,7 @@
   .hero-links {
     width: 40%;
     margin-bottom: -5%;
+    scale: 1;
   }
 }
 
@@ -699,21 +737,21 @@
             transform: translateY(40%);
     border-radius: 50% 50% 50% 50%;
     border: 1.5px solid #14599296;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#1a5d9423), color-stop(50%, black));
-    background-image: linear-gradient(to bottom, #1a5d9423, black 50%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1a5d9443), color-stop(50%, black));
+    background-image: linear-gradient(to bottom, #1a5d9443, black 50%);
   }
 }
 
 @media (min-width: 960px) {
   .planet {
-    width: 105vh;
-    height: 35vh;
-    -webkit-transform: translateY(69.5%);
-            transform: translateY(69.5%);
+    width: 100vh;
+    height: 40vh;
+    -webkit-transform: translateY(70.5%);
+            transform: translateY(70.5%);
     border-radius: 50% 50% 50% 50%;
     border: 1.5px solid #14599296;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#1a5d9423), color-stop(50%, black));
-    background-image: linear-gradient(to bottom, #1a5d9423, black 50%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1a5d9443), color-stop(50%, black));
+    background-image: linear-gradient(to bottom, #1a5d9443, black 50%);
   }
 }
 

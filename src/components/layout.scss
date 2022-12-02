@@ -347,19 +347,51 @@
 
 .hero-light{
     width: 80%;
+    position: relative;
     
     filter: blur(170px);
     @include xs{
         height: 70%;
         border-radius: 50% 50% 0% 0%;
-        background-color: #1451833a;
+        background-color: #1451834d;
     };
     @include lg{
         height: 50%;
         border-radius: 60% 60% 0% 0%;
-        background-color: #1451832a;
+        background-color: #1451833d;
     }
 }
+
+.hero-stars{
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    //background-color: rgba(255, 192, 203, 0.542);
+}
+
+// @keyframes move-twink-back {
+//     from { background-position: 0 0;}
+//     to{background-position: -10000px 500px;}
+// }
+
+.stars{
+    background:  url(https://i.imgur.com/PDOw7k2.png);
+    width: 90%;
+    opacity: 0.5;
+    height: 70%;
+    //z-index: 4;
+}
+
+.twinkling{
+    background: transparent url(https://i.imgur.com/aljoapq.png) repeat top center;
+    transform: translateY(-100%);
+    opacity: 0.1;
+    width: 100%;
+    height: 70%;
+    animation: move-twink-back 200s linear infinite;
+}
+
+
 
 .herowrapper{
     z-index: 3;
@@ -446,9 +478,14 @@
     //border: thin solid red;
     height: 15vh;
     width: 100%;
-    font-size: 6rem;
     font-weight: 700;
     justify-self: flex-start;
+    @include xs{
+        font-size: 4.5rem;
+    };
+    @include lg{
+        font-size: 6rem;
+    };
 }
 
 .description{
@@ -458,7 +495,7 @@
     height: 6vh;
     font-weight: 500;
     @include xs{
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         margin-top: 0.5%;
     };
     @include lg{
@@ -475,7 +512,7 @@
     width: 100%;
     @include xs{       
         margin-top: 5%;
-        font-size: 1.35rem;
+        font-size: 1.25rem;
     };
     @include lg{
         margin-top: 0.5%;
@@ -501,10 +538,12 @@
     @include xs{
         width: 90%;
         padding-top: 3.5vh;
+        scale: 0.8;
     };
     @include lg{
         width: 40%;
         margin-bottom: -5%;
+        scale: 1;
     }
 }
 
@@ -531,15 +570,15 @@
         transform: translateY(40%);
         border-radius: 50% 50% 50% 50%;
         border: 1.5px solid #14599296;
-        background-image: linear-gradient(to bottom  , #1a5d9423 , black 50%);
+        background-image: linear-gradient(to bottom  , #1a5d9443 , black 50%);
     };
     @include lg{
-        width: 105vh;
-        height: 35vh;
-        transform: translateY(69.5%);
+        width: 100vh;
+        height: 40vh;
+        transform: translateY(70.5%);
         border-radius: 50% 50% 50% 50%;
         border: 1.5px solid #14599296;
-        background-image: linear-gradient(to bottom  , #1a5d9423 , black 50%);
+        background-image: linear-gradient(to bottom  , #1a5d9443 , black 50%);
     };
 }
 
