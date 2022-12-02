@@ -748,6 +748,19 @@
   }
 }
 
+@media (min-width: 720px) {
+  .planet {
+    width: 90vh;
+    height: 45vh;
+    -webkit-transform: translateY(80.5%);
+            transform: translateY(80.5%);
+    border-radius: 50% 50% 50% 50%;
+    border: 1.5px solid #14599296;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1a5d9433), color-stop(50%, black));
+    background-image: linear-gradient(to bottom, #1a5d9433, black 50%);
+  }
+}
+
 @media (min-width: 960px) {
   .planet {
     width: 110vh;
