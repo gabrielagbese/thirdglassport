@@ -31,7 +31,7 @@ const Hero = ({ fn }) => {
                         <div className="first-name">Gabriel Agbese</div>
                         <div className="description">Frontend Developer,<span className="darker"> specializing in custom layouts</span></div>
                         <div className="opportunity">
-                            <p>Open to&ensp; </p>
+                            <p>Available for&ensp; </p>
                             <Typewriter
                                 options={{
                                     strings: ['Internship', 'Part-Time','Freelance'],
@@ -39,7 +39,7 @@ const Hero = ({ fn }) => {
                                     loop: true,
                                 }}
                             />
-                            <p>&ensp;opportunities</p>
+                            <p>&ensp;Roles</p>
                         </div>
                         <div className="hero-links">
                                 <div className="link blur">Github</div>
