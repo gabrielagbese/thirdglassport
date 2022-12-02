@@ -377,7 +377,8 @@
 .stars{
     background:  url(https://i.imgur.com/PDOw7k2.png);
     width: 90%;
-    opacity: 0.25;
+    opacity: 0.45;
+    transform: translateX(-25%);
     height: 70%;
     //z-index: 4;
 }
@@ -470,8 +471,9 @@
     //border: thin solid red;
     width: 100%;
     height: 3vh;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    opacity: 0.65;
+    font-weight: 400;
 }
 
 .first-name{
@@ -482,7 +484,7 @@
     justify-self: flex-start;
     @include xs{
         font-size: 3rem;
-        height: 10.5vh;
+        height: 9.5vh;
     };
     @include lg{
         font-size: 6rem;
@@ -498,7 +500,7 @@
     font-weight: 500;
     @include xs{
         font-size: 1.25rem;
-        margin-top: 0.5%;
+        margin-top: 2.5%;
     };
     @include lg{
         font-size: 1.75rem;
@@ -515,7 +517,7 @@
     display: flex;
     width: auto;
     @include xs{       
-        margin-top: 5%;
+        margin-top: 7.5%;
         font-size: 1.25rem;
     };
     @include lg{

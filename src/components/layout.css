@@ -481,7 +481,9 @@
 .stars {
   background: url(https://i.imgur.com/PDOw7k2.png);
   width: 90%;
-  opacity: 0.25;
+  opacity: 0.45;
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
   height: 70%;
 }
 
@@ -601,8 +603,9 @@
 .hey-there {
   width: 100%;
   height: 3vh;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  opacity: 0.65;
+  font-weight: 400;
 }
 
 .first-name {
@@ -614,7 +617,7 @@
 @media (min-width: 0px) {
   .first-name {
     font-size: 3rem;
-    height: 10.5vh;
+    height: 9.5vh;
   }
 }
 
@@ -634,7 +637,7 @@
 @media (min-width: 0px) {
   .description {
     font-size: 1.25rem;
-    margin-top: 0.5%;
+    margin-top: 2.5%;
   }
 }
 
@@ -660,7 +663,7 @@
 
 @media (min-width: 0px) {
   .opportunity {
-    margin-top: 5%;
+    margin-top: 7.5%;
     font-size: 1.25rem;
   }
 }
