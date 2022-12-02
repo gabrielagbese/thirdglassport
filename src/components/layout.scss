@@ -510,8 +510,10 @@
 }
 
 .opportunity{
-    //border: thin solid red;
-    width: 100%;
+    //border: thin solid red; 
+    align-self: center;
+    display: flex;
+    width: auto;
     @include xs{       
         margin-top: 5%;
         font-size: 1.25rem;
@@ -567,9 +569,9 @@
 .planet{
     z-index: 1;
     @include xs{
-        width: 60vh;
+        width: 80vh;
         height: 20vh;
-        transform: translateY(40%);
+        transform: translateY(45%);
         border-radius: 50% 50% 50% 50%;
         border: 1.5px solid #14599296;
         background-image: linear-gradient(to bottom  , #1a5d9443 , black 50%);

@@ -18,7 +18,8 @@
     "react-icons": "^4.6.0",
     "react-indiana-drag-scroll": "^2.2.0",
     "react-text-animations": "^1.1.10",
-    "react-text-transition": "^3.0.2"
+    "react-text-transition": "^3.0.2",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "prettier": "^2.7.1"

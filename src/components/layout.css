@@ -650,7 +650,12 @@
 }
 
 .opportunity {
-  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
 }
 
 @media (min-width: 0px) {
@@ -732,10 +737,10 @@
 
 @media (min-width: 0px) {
   .planet {
-    width: 60vh;
+    width: 80vh;
     height: 20vh;
-    -webkit-transform: translateY(40%);
-            transform: translateY(40%);
+    -webkit-transform: translateY(45%);
+            transform: translateY(45%);
     border-radius: 50% 50% 50% 50%;
     border: 1.5px solid #14599296;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#1a5d9443), color-stop(50%, black));
