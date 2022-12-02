@@ -745,14 +745,14 @@
 
 @media (min-width: 960px) {
   .planet {
-    width: 120vh;
-    height: 40vh;
+    width: 110vh;
+    height: 35vh;
     -webkit-transform: translateY(70.5%);
             transform: translateY(70.5%);
     border-radius: 50% 50% 50% 50%;
     border: 1.5px solid #14599296;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#1a5d9443), color-stop(50%, black));
-    background-image: linear-gradient(to bottom, #1a5d9443, black 50%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1a5d9433), color-stop(50%, black));
+    background-image: linear-gradient(to bottom, #1a5d9433, black 50%);
   }
 }
 
