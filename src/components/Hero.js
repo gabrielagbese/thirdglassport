@@ -21,7 +21,7 @@ const Hero = ({ fn }) => {
                     <div className="hero-underlier">
                         <div className="hero-light"></div>
                         <div className="hero-stars">
-                            <div class="stars"></div>
+                            <div class="starsi"></div>
                             <div class="twinkling"></div>
                         </div>
                     </div>
