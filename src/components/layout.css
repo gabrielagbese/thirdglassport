@@ -896,7 +896,7 @@
     margin-left: 5%;
     margin-top: 8vh;
     width: 91.6%;
-    height: 89.75%;
+    height: 79.75%;
     overflow-x: hidden;
   }
 }
@@ -915,7 +915,7 @@
     margin-left: 5%;
     margin-top: 8vh;
     width: 91.6%;
-    height: 89.75%;
+    height: 79.75%;
   }
 }
 
@@ -1571,7 +1571,7 @@ input:checked + .slider:before {
 
 @media (min-width: 960px) {
   .projectitem {
-    min-width: 30%;
+    min-width: 40%;
     height: 90%;
   }
 }

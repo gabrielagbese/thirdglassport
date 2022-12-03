@@ -39,7 +39,7 @@ const Hero = ({ fn }) => {
                                     loop: true,
                                 }}
                             />
-                            <p>&ensp;Roles</p>
+                            <p>&ensp;Opportinities</p>
                         </div>
                         <div className="hero-links">
                                 <div className="link blur">Github</div>
