@@ -17,16 +17,19 @@ import Draggable from "gsap/Draggable"
 import gif from "../images/gif.gif"
 import {AiOutlineClose} from "react-icons/ai"
 import ScrollContainer from "react-indiana-drag-scroll"
-
-//import { TimelineMax } from "gsap/gsap-core"
-
-//page components
+import { inject } from '@vercel/analytics';
 import About from "./About"
 import Hero from "./Hero"
 import Projects from "./Projects"
 import Contact from "./Contact"
 import Toggle from "./Toggle"
 import "./layout.css"
+inject();
+
+//import { TimelineMax } from "gsap/gsap-core"
+
+//page components
+
 
 const Layout = ({ children }) => {
   const [active, setActive] = useState("heroCard")
@@ -334,7 +337,7 @@ function aboutSelect() {
     tl2.fromTo(
       ".links",
       { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
+      { opacity: 1, duration: 2.5, ease: "power2", x: "0%" }
     )
     tl3.fromTo(
       ".subcard3",
@@ -346,18 +349,18 @@ function aboutSelect() {
     tl9.fromTo(
       ".biotext",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1.5, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
     )
     tl10.fromTo(
       ".firstskills",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1.5, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
     )
-    tl11.fromTo(
-      ".swaptab",
-      { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
-    )
+    // tl11.fromTo(
+    //   ".swaptab",
+    //   { opacity: 0.3, x: "100%" },
+    //   { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
+    // )
     tl12.fromTo(
       ".bio",
       { opacity: 0.3, x: "100%" },
@@ -381,7 +384,7 @@ function aboutSelect() {
     tl2.fromTo(
       ".links",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 2, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
     )
     tl3.fromTo(
       ".subcard3",
