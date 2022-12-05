@@ -42,7 +42,7 @@ const Hero = ({ fn }) => {
                             <p>&ensp;Opportinities</p>
                         </div>
                         <div className="hero-links">
-                                <div className="link blur">Githu3</div>
+                                <div className="link blur">Github</div>
                                 <div className="link blur">LinkedIn</div>
                                 <div className="link blur">Email</div>
                             </div>
