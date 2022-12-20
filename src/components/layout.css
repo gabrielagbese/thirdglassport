@@ -1243,6 +1243,12 @@
   }
 }
 
+.bio-content {
+  font-size: 2rem;
+  padding: 5px;
+  overflow: auto;
+}
+
 .firstskills {
   opacity: 0;
 }
@@ -1250,7 +1256,6 @@
 @media (min-width: 0px) {
   .firstskills {
     display: none;
-    overflow-y: scroll;
   }
 }
 

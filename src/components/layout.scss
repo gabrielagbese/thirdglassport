@@ -989,11 +989,17 @@
     //align-self: ;
 }
 
+.bio-content{
+    font-size: 2rem;
+    padding: 5px;
+    overflow: auto;
+}
+
 .firstskills{
     opacity: 0;
     @include xs{
         display: none;
-        overflow-y: scroll;
+        //overflow-y: auto;
     };
     @include lg{
        display: flex;
