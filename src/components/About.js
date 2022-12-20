@@ -58,11 +58,11 @@ const About = ({fn}) => {
                     <div className="links midtext"><img src={memoji} alt="BigCo Inc. logo" className="memoji"/></div>
                     <div className="biotext smalltext">
                         <div className="about-button blur midtext">
-                            <p className="smidtext">Linkedin</p>
+                            <p className="smidtext"><a className="default-link" href="https://www.linkedin.com/in/gabriel-agbese/" target="_blank">Linkedin</a></p>
                             <SlSocialLinkedin className="icon"/>
                         </div>
                         <div className="about-button blur midtext">
-                            <p className="smidtext">Resume</p>
+                            <p className="smidtext"><a className="default-link" href="./CV-December-2023(2).pdf" target="_blank">Resume</a></p>
                             <CgFileDocument className="icon"/>
                         </div>
                     </div>

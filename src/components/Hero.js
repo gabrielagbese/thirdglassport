@@ -42,9 +42,9 @@ const Hero = ({ fn }) => {
                             <p>&ensp;Opportinities</p>
                         </div>
                         <div className="hero-links">
-                                <div className="link blur"><a className="default-link" href="https://github.com/gabrielagbese">Github</a></div>
-                                <div className="link blur"><a className="default-link" href="https://www.linkedin.com/in/gabriel-agbese/">Linkedin</a></div>
-                                <div className="link blur" onClick={(e) => {window.location.href ='mailto:gabriel.agbese2001@gmail.com';}}>Email</div>
+                                <div className="link blur"><a className="default-link" href="https://github.com/gabrielagbese" target="_blank">Github</a></div>
+                                <div className="link blur"><a className="default-link" href="https://www.linkedin.com/in/gabriel-agbese/" target="_blank">Linkedin</a></div>
+                                <div className="link blur" onClick={(e) => {window.location.href ='mailto:gabriel.agbese2001@gmail.com';}} >Email</div>
                             </div>
                         <div className="planet"></div>
                     </div>
