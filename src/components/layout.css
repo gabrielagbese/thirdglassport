@@ -1250,6 +1250,7 @@
 @media (min-width: 0px) {
   .firstskills {
     display: none;
+    overflow-y: scroll;
   }
 }
 
@@ -1309,6 +1310,7 @@
   .skill-list > li {
     list-style: none;
     margin-left: 5%;
+    margin-top: -0.5%;
   }
 }
 

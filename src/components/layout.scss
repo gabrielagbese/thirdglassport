@@ -993,6 +993,7 @@
     opacity: 0;
     @include xs{
         display: none;
+        overflow-y: scroll;
     };
     @include lg{
        display: flex;
@@ -1032,6 +1033,7 @@
     @include md{
         list-style: none;
         margin-left: 5%; 
+        margin-top: -0.5%;
     };
 }
 

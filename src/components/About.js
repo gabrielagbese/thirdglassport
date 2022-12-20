@@ -74,7 +74,7 @@ const About = ({ fn }) => {
                                 <li>Python</li>
                                 <li>HTML</li>
                                 <li>CSS</li>
-                                <li>JavaScript</li>
+                                <li>JavaScript &#40;ES 6+&#41;</li>
                             </ul>
                             <p className="list-header">Tools and Frameworks:</p>
                             <ul className="skill-list">
@@ -118,7 +118,9 @@ const About = ({ fn }) => {
                                 <li>Python,</li>
                                 <li>HTML,</li>
                                 <li>CSS,</li>
-                                <li>JavaScript</li>
+                            </ul>
+                            <ul className="skill-list">
+                                <li>JavaScript &#40;ES 6+&#41;</li>
                             </ul>
                             <p className="list-header">Tools and Frameworks:</p>
                             <ul className="skill-list">
