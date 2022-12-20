@@ -323,15 +323,10 @@ function aboutSelect() {
   if (window.innerWidth >= 720) {
     //disapearing colors tween
     tl5.to(".ball", { opacity: 0, duration: 0.1 })
-
-    // tl17.fromTo(".x",
-    //   {opacity: 0.3, x:"100%"},
-    //   {opacity: 1, duration: 1.5, x: "0%",duration:2,}
-    // )
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1.5, y: "0%" }
+      { opacity: 1, duration: 1.25, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
     tl2.fromTo(
@@ -354,7 +349,7 @@ function aboutSelect() {
     tl10.fromTo(
       ".firstskills",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 1.5, ease: "power2", y: "0%" }
     )
     // tl11.fromTo(
     //   ".swaptab",
@@ -489,7 +484,7 @@ function contactSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 1, y: "100%" },
-      { opacity: 1, duration: 1.5, y: "0%" }
+      { opacity: 1, duration: 1.25, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
     tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, })
@@ -507,7 +502,7 @@ function contactSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1.5, y: "0%" }
+      { opacity: 1, duration: 1.25, y: "0%" }
     )
 
 	tl1.to(".eyewrapper", { opacity: 0.8 })
