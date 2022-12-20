@@ -258,6 +258,11 @@
     }
 }
 
+.default-link{
+    text-decoration: none;
+    color: white;
+}
+
 .cardwrapper {
     @include xs {
         //border-right: 2.5px solid rgba(255, 255, 255, 0.2);

@@ -326,6 +326,11 @@
   }
 }
 
+.default-link {
+  text-decoration: none;
+  color: white;
+}
+
 @media (min-width: 0px) {
   .cardwrapper {
     border-radius: 15px 15px 0px 0px;
