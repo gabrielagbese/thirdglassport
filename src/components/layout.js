@@ -224,7 +224,7 @@ const Layout = ({ children }) => {
 function changeColor(color1, color2, color3) {
   var ball1 = document.getElementById("ball1")
   var ball2 = document.getElementById("ball2")
-  var colorIntensity = "76"
+  var colorIntensity = "b2"
 
   ball1.style.background =
     "linear-gradient(to left, " +
@@ -488,15 +488,15 @@ function contactSelect() {
     tl5.to(".ball", { opacity: 0, duration: 0.1 })
     tl1.fromTo(
       ".cardwrapper",
-      { opacity: 0.3, y: "100%" },
+      { opacity: 1, y: "100%" },
       { opacity: 1, duration: 1.5, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
-    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 0.5 })
-    tl1.fromTo(
+    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, })
+    tl7.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1, y: "0%" }
+      { opacity: 1, duration: 1.25, y: "0%" ,delay: 1.5}
     )
     tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 

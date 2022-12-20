@@ -29,12 +29,12 @@ const Hero = ({ fn }) => {
                         <div className="top-space"></div>
                         <div className="hey-there">Hello there, I'm-</div>
                         <div className="first-name">Gabriel Agbese</div>
-                        <div className="description">Frontend Developer,<span className="darker"> specializing in custom layouts</span></div>
+                        <div className="description"><span className="darker"> A </span>Frontend Developer,<span className="darker"> with a passion for custom layouts and interactions.</span></div>
                         <div className="opportunity">
                             <p>Available for&ensp; </p>
                             <Typewriter
                                 options={{
-                                    strings: ['Internship', 'Part-Time','Freelance'],
+                                    strings: ['Remote','Internship', 'Part-Time','Freelance'],
                                     autoStart: true,
                                     loop: true,
                                 }}

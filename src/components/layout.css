@@ -331,6 +331,7 @@
     border-radius: 15px 15px 0px 0px;
     width: 92.5%;
     height: 85%;
+    background-color: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -617,7 +618,7 @@
 
 @media (min-width: 960px) {
   .first-name {
-    font-size: 6rem;
+    font-size: 5rem;
     height: 15vh;
   }
 }
@@ -637,8 +638,8 @@
 
 @media (min-width: 960px) {
   .description {
-    font-size: 1.75rem;
-    margin-top: 2.5%;
+    font-size: 1.5rem;
+    margin-top: 0%;
   }
 }
 
@@ -726,6 +727,10 @@
   .link {
     width: 21%;
   }
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .planet {
@@ -1022,6 +1027,7 @@
 
 .blur {
   border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
   background-image: url(../images/texture.png);
   background-size: contain;
   background-repeat: repeat;
@@ -1684,6 +1690,18 @@ input:checked + .slider:before {
   scale: 1 0.92;
   -webkit-transform: rotate(10deg) translatex(-50%);
           transform: rotate(10deg) translatex(-50%);
+}
+
+.eyewrapper:hover .eye1 .pupil {
+  scale: 1.1;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.eyewrapper:hover .eye2 .pupil {
+  scale: 1.1;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 @media (min-width: 0px) {

@@ -264,6 +264,7 @@
         border-radius: 15px 15px 0px 0px;
         width: 92.5%;
         height: 85%;
+        background-color: rgba(255, 255, 255, 0.05);
     }
 
     @include lg {
@@ -428,21 +429,7 @@
     };
 }
 
-// .hellotext{
-//     @include xs{
-//         font-size: 1.5rem;
-//         margin-bottom: 7%;
-//     };
-//     @include md{
-//         font-size: 1.5rem;
-//         margin-bottom: 1%;
-//         //margin-bottom: -1%;
-//     };
-//     @include lg{
-//         font-size: 1.5rem;
-//         //margin-bottom: -1%;
-//     };
-// }
+
 .memoji{
     @include xs{
         width: calc(100% - 10px);
@@ -495,7 +482,7 @@
         height: 7.5vh;
     };
     @include lg{
-        font-size: 6rem;
+        font-size: 5rem;
         height: 15vh;
     };
 }
@@ -511,8 +498,8 @@
         margin-top: 2.5%;
     };
     @include lg{
-        font-size: 1.75rem;
-        margin-top: 2.5%;
+        font-size: 1.5rem;
+        margin-top: 0%;
     };
 }
 .darker{
@@ -574,6 +561,10 @@
     @include lg{
         width: 21%;
     }
+}
+
+.link:hover{
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .planet{
@@ -837,18 +828,10 @@
 
 .blur{
     border-radius: 15px;
-    // backdrop-filter: blur(552px);
-    // backface-visibility: hidden;
-    // perspective: 1000;
-    // transform: translate3d(0, 0, 0);
-    // transform: translateZ(0);
+    background-color: rgba(255, 255, 255, 0.05);
     background-image: url(../images/texture.png);
         background-size: contain;
         background-repeat: repeat;
-    // background-color: rgba(112, 105, 105, 0.199);
-    // background: linear-gradient(45deg,
-    //         rgba(63, 61, 61, 0.011) 5%,
-    //         rgba(104, 99, 99, 0.211));
     
     box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.5);
     @include xs{
@@ -1358,6 +1341,16 @@
 .eyewrapper:hover .eye2{
     scale: 1 0.92;
     transform: rotate(10deg) translatex(-50%) ;
+}
+
+.eyewrapper:hover .eye1 .pupil{
+    scale: 1.1; 
+    transform: translateX(100%);
+}
+
+.eyewrapper:hover .eye2 .pupil{
+    scale: 1.1;
+    transform: translateX(-100%);
 }
 
 .x{
