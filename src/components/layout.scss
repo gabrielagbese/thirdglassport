@@ -847,6 +847,23 @@
     };
 }
 
+.blurbio{
+    overflow: auto;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    background-image: url(../images/texture.png);
+        background-size: contain;
+        background-repeat: repeat;
+    
+    box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.5);
+    @include xs{
+        border: 1px solid rgba(178, 164, 135, 0.219);
+    };
+    @include lg{
+        border: 1px solid rgba(178, 164, 135, 0.179);
+    };
+}
+
 .bio{
     opacity: 0;
     @include xs{

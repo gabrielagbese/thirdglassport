@@ -1052,6 +1052,29 @@
   }
 }
 
+.blurbio {
+  overflow: auto;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  background-image: url(../images/texture.png);
+  background-size: contain;
+  background-repeat: repeat;
+  -webkit-box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 0px) {
+  .blurbio {
+    border: 1px solid rgba(178, 164, 135, 0.219);
+  }
+}
+
+@media (min-width: 960px) {
+  .blurbio {
+    border: 1px solid rgba(178, 164, 135, 0.179);
+  }
+}
+
 .bio {
   opacity: 0;
 }

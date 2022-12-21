@@ -108,8 +108,8 @@ const About = ({ fn }) => {
                             <label for="skillstabradio">Skills</label>
                         </div>
                     </div>
-                    <div className="bio blur">
-                        <div className="someData" id="first">
+                    <div className="bio blurbio">
+                        <div className="someData " id="first">
                             <p className="bio-content">I’m a front-end web developer in my final year at the University of Debrecen. I work with agencies across the globe to create high performance & rich interactive websites that work across all platforms & devices.</p>
                         </div>
                         <div className="someData" id="second"><p className="list-header">Languages:</p>
