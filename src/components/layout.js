@@ -444,7 +444,8 @@ function projectSelect() {
       { opacity: 0, x: "-75%" },
       { opacity: 1, duration: 1.5, x: "0%" }
     )
-    tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
+    tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl15.fromTo(".projectside-content", { opacity: 0 }, { opacity: 1, duration: 1 })
     firstMoveBalls()
     setTimeout(() => {
       tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 2 })
@@ -468,7 +469,7 @@ function projectSelect() {
       { opacity: 1, duration: 1.5, x: "0%" }
     )
 
-    tl15.fromTo(".projectside", { opacity: 0 }, { opacity: 1, duration: 1.5 })
+    tl15.fromTo(".projectside", { opacity: 0 }, { opacity: 1, duration: 1.5, delay: 1 })
     tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 2 })
     setTimeout(() => {
       tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 2 })
