@@ -517,7 +517,7 @@
     display: flex;
     width: auto;
     @include xs{       
-        margin-top: 7.5%;
+        margin-top: 1%;
         font-size: 1.25rem;
     };
     @include lg{
@@ -849,6 +849,7 @@
 
 .blurbio{
     overflow: auto;
+    padding-top: 0%;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.05);
     background-image: url(../images/texture.png);
@@ -1033,7 +1034,7 @@
     padding: 5px;
     overflow: auto;
     @include lg{
-        font-size: 2rem;
+        font-size: 2.15rem;
     }
 }
 

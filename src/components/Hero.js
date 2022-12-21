@@ -29,7 +29,7 @@ const Hero = ({ fn }) => {
                         <div className="top-space"></div>
                         <div className="hey-there">Hello there, I'm-</div>
                         <div className="first-name">Gabriel Agbese</div>
-                        <div className="description"><span className="darker"> A </span>Frontend Developer,<span className="darker"> with a passion for custom layouts and interactions.</span></div>
+                        <div className="description">Frontend Developer</div>
                         <div className="opportunity">
                             <p>Available for&ensp; </p>
                             <Typewriter
