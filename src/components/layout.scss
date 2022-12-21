@@ -862,7 +862,29 @@
     @include lg{
         border: 1px solid rgba(178, 164, 135, 0.179);
     };
+
+    &::-webkit-scrollbar {
+        width: 15px;
+        
+        //margin-left: 2px;
+        
+    }
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 7.5px;
+        //background-color: red;
+        box-shadow: inset 0 0 10px rgba(155, 155, 155, 0.25);
+        //border: 5px solid rgba(255, 255, 255, 0);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 7.5px;
+        background-color: rgba(155, 155, 155, 0.35);;
+    }
 }
+
+
+
 
 .bio{
     opacity: 0;
@@ -999,7 +1021,7 @@
 
 .biotexttext{
     opacity: 0;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     @include lg{
         margin-left: 10%;
     }
@@ -1007,9 +1029,12 @@
 }
 
 .bio-content{
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 5px;
     overflow: auto;
+    @include lg{
+        font-size: 2rem;
+    }
 }
 
 .firstskills{
