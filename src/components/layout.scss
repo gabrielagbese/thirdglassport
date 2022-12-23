@@ -862,6 +862,9 @@
     };
     @include lg{
         border: 1px solid rgba(178, 164, 135, 0.179);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
     };
 
     &::-webkit-scrollbar {

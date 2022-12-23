@@ -1073,6 +1073,15 @@
 @media (min-width: 960px) {
   .blurbio {
     border: 1px solid rgba(178, 164, 135, 0.179);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

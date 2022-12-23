@@ -113,6 +113,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="wrapper text">
+      <meta name="pinterest" content="nopin" />
       <div className="cardlayer">
         <div id="anchor" className="top">
           <div className="eyewrapper" onClick={() => {
@@ -188,7 +189,7 @@ const Layout = ({ children }) => {
               contentlight.style.opacity = 1
               setTimeout(() => {
                 projectSelect()
-                changeColor("#3322ff", "#11d9ff", "#3322ff")
+                changeColor("#3322ff", "#FF44CC", "#11d9ff")
               }, 0.1)
             }}
             className="navspan"
@@ -331,13 +332,13 @@ function aboutSelect() {
     tl1.to(".eyewrapper", { opacity: 0.8 })
     tl2.fromTo(
       ".links",
-      { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 2.5, ease: "power2", x: "0%" }
+      { opacity: 0.3, y: "-100%" },
+      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
     )
     tl3.fromTo(
       ".subcard3",
-      { opacity: 0.3, x: "-100%" },
-      { opacity: 1, duration: 1.5, ease: "power2", x: "0%" }
+      { opacity: 0.3, y: "-100%" },
+      { opacity: 1, duration: 1.5, ease: "power2", y: "0%" }
     )
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     tl7.fromTo(".subcard3", { opacity: 0.3 }, { opacity: 1 })
@@ -488,7 +489,7 @@ function contactSelect() {
       { opacity: 1, duration: 1.25, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
-    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, })
+    tl8.fromTo(".contactside", { opacity: 0 }, { opacity: 1, delay: 1.15})
     tl7.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },

@@ -10,7 +10,7 @@ export default function Projectitem(props) {
     const thirdTech = props.third;
   return (
     <div className='project-item-wrapper'>
-        <img className='project-item-image' src={img}/>
+        <img className='project-item-image' src={img} nopin = "nopin"/>
         <div className='project-item-header'>
             <div className='project-item-name'><p>{name}</p></div>
             <div className='project-item-links'>Live</div>

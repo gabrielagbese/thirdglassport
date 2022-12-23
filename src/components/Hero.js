@@ -34,7 +34,7 @@ const Hero = ({ fn }) => {
                             <p>Available for&ensp; </p>
                             <Typewriter
                                 options={{
-                                    strings: ['Remote','Internship', 'Part-Time','Freelance'],
+                                    strings: ['Remote','Internship','Freelance'],
                                     autoStart: true,
                                     loop: true,
                                 }}
