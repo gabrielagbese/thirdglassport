@@ -269,7 +269,7 @@
         border-radius: 15px 15px 0px 0px;
         width: 92.5%;
         height: 85%;
-        background-color: rgba(255, 255, 255, 0.05);
+        //background-color: rgba(255, 255, 255, 0.05);
     }
 
     @include lg {
@@ -624,8 +624,8 @@
 
     @include lg {
         background: linear-gradient(-135deg,
-                rgba(227, 206, 206, 0.261) 5%,
-                rgba(0, 0, 0, 0.344));
+                rgba(227, 206, 206, 0.11) 25%,
+                rgba(227, 206, 206, 0.174));
         //background-color: rgba(255, 255, 255, 0.051);
         //background: linear-gradient(to right , rgba(0, 128, 0, 0.621) 20%,  black 55%,rgba(0, 128, 0, 0.286));
         //background: url(/src/images/testface.png);
@@ -1033,11 +1033,11 @@
 }
 
 .bio-content{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 5px;
     overflow: auto;
     @include lg{
-        font-size: 2rem;
+        font-size: 1.85rem;
         font-weight: 200;
     }
 }

@@ -110,6 +110,9 @@ const About = ({ fn }) => {
                     </div>
                     <div className="bio blurbio">
                         <div className="someData " id="first">
+                            <p className="bio-content"></p>
+                            <p className="bio-content"></p>
+                            <p className="bio-content"></p>
                             {/* <p className="bio-content">I’m a front-end web developer in my final year at the University of Debrecen. I have a passion for crafting unique layouts and interactions.</p>
                             <p className="bio-content">I'm perpetually working to improve my skills to deliver the best service possible.</p> */}
                             <p className="bio-content"> As a creative frontend developer, I focus on both design and development — allowing me to work on projects from concept until the very moment we hit publish. Unique layouts, interactions and great typography is what I focus on when working on websites.</p>

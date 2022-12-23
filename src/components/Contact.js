@@ -38,7 +38,11 @@ const Contact = ({fn}) => {
                             <span><p>twitter</p></span>
                         </div>
                     </div>
-                    <div className="contactcontent blur"></div>
+                    <div className="contactcontent blur">
+                        <form>
+                            <input></input>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
