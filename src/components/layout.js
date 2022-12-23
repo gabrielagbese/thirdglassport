@@ -141,13 +141,13 @@ const Layout = ({ children }) => {
           
         </div>
         <div className="cardwrapper ">
-			<div className="aurora">
-				<div className="ball " id="ball1"></div>
-			</div>
-			<div className="aurora">
-				<div className="ball " id="ball2"></div>
-			</div>
-			<div className="card visible"></div>
+          <div className="aurora">
+            <div className="ball " id="ball1"></div>
+          </div>
+          <div className="aurora">
+            <div className="ball " id="ball2"></div>
+          </div>
+          <div className="card visible"></div>
         </div>
       </div>
 
