@@ -189,7 +189,7 @@ const Layout = ({ children }) => {
               contentlight.style.opacity = 1
               setTimeout(() => {
                 projectSelect()
-                changeColor("#3322ff", "#FF44CC", "#11d9ff")
+                changeColor("#06725B", "#08ECDC", "#011ED9")
               }, 0.1)
             }}
             className="navspan"
