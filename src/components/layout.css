@@ -793,7 +793,7 @@
 
 @media (min-width: 0px) {
   .card {
-    background: linear-gradient(-135deg, rgba(227, 206, 206, 0.271) 5%, rgba(31, 31, 31, 0.344));
+    background: linear-gradient(-135deg, rgba(227, 206, 206, 0.311) 25%, rgba(227, 206, 206, 0.224));
     border-radius: 15px 15px 0px 0px;
     width: 100;
     height: 100%;
@@ -802,7 +802,7 @@
 
 @media (min-width: 960px) {
   .card {
-    background: linear-gradient(-135deg, rgba(227, 206, 206, 0.11) 25%, rgba(227, 206, 206, 0.174));
+    background: linear-gradient(-135deg, rgba(227, 206, 206, 0.251) 25%, rgba(227, 206, 206, 0.174));
     border-radius: 20px 20px 0px 0px;
     width: 100%;
     height: 100%;
@@ -1923,10 +1923,11 @@ input:checked + .slider:before {
 
 @media (min-width: 0px) {
   .contactside {
-    width: 98%;
+    width: 98.5%;
     height: 30%;
     margin-bottom: 1%;
     background-color: #4d4a4a0e;
+    background: rgba(255, 255, 255, 0.44);
     z-index: 5;
     border: thin solid blue;
   }
@@ -1943,6 +1944,7 @@ input:checked + .slider:before {
     border-right: 1px solid rgba(255, 255, 255, 0.135);
     border-bottom: 3px solid rgba(255, 255, 255, 0.012);
     border-top: 1px solid rgba(255, 255, 255, 0.012);
+    background: none;
     margin-left: 0.2%;
     margin-right: 4.25%;
     -webkit-transform: translateY();
@@ -2176,23 +2178,163 @@ input:checked + .slider:before {
           flex-direction: column-reverse;
 }
 
-.chat {
-  background-color: white;
-  border-radius: 15px;
-  height: auto;
+.input-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
 }
 
-.chat-input {
-  height: 7.5vh;
-  width: 90%;
+.chat {
+  background-color: white;
+  border-radius: 25px;
+  height: auto;
+  margin-left: 2.5%;
+  min-width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1vh;
+}
+
+@media (min-width: 0px) {
+  .chat {
+    padding-top: 1vh;
+    height: 6.5vh;
+  }
+}
+
+@media (min-width: 720px) {
+  .chat {
+    padding-top: 0vh;
+    height: 7.5vh;
+  }
+}
+
+.chat-visible {
+  display: block;
+}
+
+.chat-hidden {
+  display: none;
+}
+
+.name-input, .mail-input, .message-input {
+  width: 75%;
   border-radius: 15px;
+  color: orange;
+  border: none;
+  margin-left: 5%;
+}
+
+@media (min-width: 0px) {
+  .name-input, .mail-input, .message-input {
+    height: 5vh;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 720px) {
+  .name-input, .mail-input, .message-input {
+    height: 8.5vh;
+    font-size: 1.15em;
+  }
+}
+
+.name-input:focus, .mail-input:focus, .message-input:focus {
+  outline: none;
 }
 
 .chat-button {
   border-radius: 50%;
-  width: 10%;
+}
+
+@media (min-width: 0px) {
+  .chat-button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (min-width: 720px) {
+  .chat-button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.form-label {
+  color: orange;
+}
+
+.chat-display {
+  width: 100%;
+  border: thin solid orange;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 0px) {
+  .chat-display {
+    height: 60%;
+  }
+}
+
+@media (min-width: 720px) {
+  .chat-display {
+    height: 70%;
+  }
+}
+
+.you-chat {
+  opacity: 0;
+  display: none;
+  width: 39.5%;
+  min-height: auto;
+  margin: 1.25%;
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 1.5px solid white;
+  border-radius: 35px 35px 35px 0px;
+  padding: 5px 25px 5px 25px;
+}
+
+.me-chat {
+  opacity: 0;
+  display: none;
+  width: 39.5%;
+  min-height: auto;
+  margin: 1.25%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: rgba(221, 0, 255, 0.35);
+  border: 1.5px solid #e400fd;
+  border-radius: 35px 35px 0px 35px;
+  padding: 5px 25px 5px 25px;
+}
+
+.chat-text-wrap {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 90%;
+  margin-left: 1.5%;
+  word-wrap: break-word;
+}
+
+@media (min-width: 0px) {
+  .chat-text-wrap {
+    font-size: rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .chat-text-wrap {
+    font-size: 1.25rem;
+  }
 }
 /*# sourceMappingURL=layout.css.map */
