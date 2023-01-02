@@ -23,7 +23,7 @@ export default function Form() {
                 chatDisplay.scrollTop = chatDisplay.scrollHeight;
             }
 
-            setInterval(updateScroll,1010);
+            setInterval(updateScroll,500);
 
             if(a == "chatOne" && nameInput.value.length > 0){
                 chatOne.classList.add("chat-hidden");
@@ -46,6 +46,7 @@ export default function Form() {
                 chatTl.to(".mail-me-chat", {duration: 1, opacity: 1, display: "block"})
                 chatTl.to(".mail-you-chat", {duration: 1, opacity: 1,delay: 1, display: "block"})
             }else if(a =="chatThree"){
+
                 chatTl.to(".message-me-chat", {duration: 1, opacity: 1, display: "block"})
                 chatTl.to(".message-you-chat", {duration: 1, opacity: 1,delay: 1, display: "block"})
             }
