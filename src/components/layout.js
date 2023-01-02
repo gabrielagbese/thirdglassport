@@ -225,7 +225,7 @@ const Layout = ({ children }) => {
 function changeColor(color1, color2, color3) {
   var ball1 = document.getElementById("ball1")
   var ball2 = document.getElementById("ball2")
-  var colorIntensity = "b2"
+  var colorIntensity = "d2"
 
   ball1.style.background =
     "linear-gradient(to left, " +

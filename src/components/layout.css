@@ -1899,9 +1899,9 @@ input:checked + .slider:before {
 @media (min-width: 0px) {
   .contact {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -1923,13 +1923,12 @@ input:checked + .slider:before {
 
 @media (min-width: 0px) {
   .contactside {
-    width: 100%;
-    height: 20%;
+    width: 98%;
+    height: 30%;
     margin-bottom: 1%;
     background-color: #4d4a4a0e;
-    border-radius: 20px 0px 0px 0px;
-    margin-left: -0.5%;
-    border-bottom: 1.25px solid rgba(255, 255, 255, 0.135);
+    z-index: 5;
+    border: thin solid blue;
   }
 }
 
@@ -1937,6 +1936,7 @@ input:checked + .slider:before {
   .contactside {
     width: 35%;
     height: 100%;
+    border-radius: 20px 0px 0px 0px;
     background-image: url(../images/texture.png);
     background-size: contain;
     background-repeat: repeat;
@@ -1966,8 +1966,8 @@ input:checked + .slider:before {
         -ms-grid-row-align: center;
         align-self: center;
     width: 95%;
-    height: 80%;
-    margin-top: 20%;
+    height: 70%;
+    margin-top: 2%;
     border-radius: 15px 15px 0 0;
     background-color: rgba(0, 0, 0, 0.175);
   }
@@ -2159,5 +2159,40 @@ input:checked + .slider:before {
 .project-item-description {
   margin-top: 2%;
   font-size: 1rem;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: 90%;
+  border: thin solid red;
+  border-radius: 15px 15px 0 0;
+  margin-top: -0.25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.chat {
+  background-color: white;
+  border-radius: 15px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.chat-input {
+  height: 7.5vh;
+  width: 90%;
+  border-radius: 15px;
+}
+
+.chat-button {
+  border-radius: 50%;
+  width: 10%;
 }
 /*# sourceMappingURL=layout.css.map */
