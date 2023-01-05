@@ -1,11 +1,24 @@
 import React from 'react'
 import { useEffect } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
+import Lottie from 'react-lottie';
+import animationData from './textanim.json'
 
 
 export default function Form() {
 
+    const defaultOptions = {
+        loop: true,
+        autoplay: true, 
+        animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+      };
+
     var chatTl = gsap.timeline()
+    const messageEndRef = useRef(null)
 
     function showName(a) {
         setTimeout(() => {
@@ -18,12 +31,12 @@ export default function Form() {
             let mailInput = document.querySelector(".mail-input");
             let messageInput = document.querySelector(".message-input");
 
-            function updateScroll(){
-                let chatDisplay = document.querySelector(".chat-display");
-                chatDisplay.scrollTop = chatDisplay.scrollHeight;
+            function scrollChat(a){
+                setTimeout(() => {
+                    let chatDisplay = document.querySelector(".chat-display");
+                    chatDisplay.scrollTop = chatDisplay.scrollHeight;
+                  },1000*a)
             }
-
-            setInterval(updateScroll,500);
 
             if(a == "chatOne" && nameInput.value.length > 0){
                 chatOne.classList.add("chat-hidden");
@@ -31,26 +44,29 @@ export default function Form() {
                 chatTwo.classList.add("chat-visible");
                 chatTwo.classList.remove("chat-hidden");
 
-                chatTl.to(".name-me-chat", {duration: 1, opacity: 1, display: "block"})
-                chatTl.to(".name-you-chat", {duration: 1, opacity: 1,delay: 1, display: "block"})
+                chatTl.to(".name-me-chat", {duration: 0.5, opacity: 1, display: "block"})
+                chatTl.to(".name-you-chat", {duration: 0.5, opacity: 1,delay: 0.5, display: "flex"})
 
                 console.log(nameInput.value);
-            }else if(a =="chatTwo" && mailInput.value.length > 0){
                 
+            }else if(a =="chatTwo" && mailInput.value.length > 0){
                 chatTwo.classList.add("chat-hidden");
                 chatTwo.classList.remove("chat-visible");
                 chatThree.classList.add("chat-visible");
                 chatThree.classList.remove("chat-hidden");
                 console.log(mailInput.value);
-
-                chatTl.to(".mail-me-chat", {duration: 1, opacity: 1, display: "block"})
-                chatTl.to(".mail-you-chat", {duration: 1, opacity: 1,delay: 1, display: "block"})
+                chatTl.to(".mail-me-chat", {duration: 0.5, opacity: 1, display: "block"})
+                chatTl.to(".mail-you-chat", {duration: 0.5, opacity: 1,delay: 0.5, display: "flex"})
+                scrollChat(0.5)
+                scrollChat(1)
             }else if(a =="chatThree"){
-
-                chatTl.to(".message-me-chat", {duration: 1, opacity: 1, display: "block"})
-                chatTl.to(".message-you-chat", {duration: 1, opacity: 1,delay: 1, display: "block"})
+                //const interval = setInterval(updateScroll,500);
+                chatTl.to(".message-me-chat", {duration: 0.5, opacity: 1, display: "block"})
+                chatTl.to(".message-you-chat", {duration: 0.5, opacity: 1,delay: 0.5, display: "flex"})
+                scrollChat(0.1)
+                scrollChat(0.5)
+                scrollChat(1.25)
             }
-
         }, 0.1)
     }
 
@@ -69,17 +85,22 @@ export default function Form() {
                     <input className='message-input' type="text" name="name" id="name" placeholder='message'></input>
                     <button className='chat-button' type="button" onClick={() => {showName("chatThree")}}>|</button>
                 </div>
+                
             </form>
             <div className='chat-display'>
+                
                 <div className='me-chat name-me-chat'>
                     <p className='chat-text-wrap'>
                         default
                     </p>
                 </div>
                 <div className='you-chat name-you-chat'>
-                    <p className='chat-text-wrap'>
+                    <p className='chat-text-wrap .chat-wrap-you'>
                         default
                     </p>
+                    <div className="typing">
+                    <Lottie options={defaultOptions} width={100} height={50}/>
+                    </div>
                 </div>
                 <div className='me-chat mail-me-chat'>
                     <p className='chat-text-wrap'>
@@ -87,9 +108,12 @@ export default function Form() {
                     </p>
                 </div>
                 <div className='you-chat mail-you-chat'>
-                    <p className='chat-text-wrap'>
+                    <p className='chat-text-wrap .chat-wrap-you'>
                         default
                     </p>
+                    <div className="typing">
+                    <Lottie options={defaultOptions} width={100} height={50}/>
+                    </div>
                 </div>
                 <div className='me-chat message-me-chat'>
                     <p className='chat-text-wrap'>
@@ -97,10 +121,12 @@ export default function Form() {
                     </p>
                 </div>
                 <div className='you-chat message-you-chat'>
-                    <p className='chat-text-wrap'>
+                    <p className='chat-text-wrap .chat-wrap-you'>
                         default
                     </p>
+                    <div ref={messageEndRef}></div>
                 </div>
+                
             </div>
         </div>
     )
