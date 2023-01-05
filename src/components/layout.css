@@ -2370,9 +2370,8 @@ input:checked + .slider:before {
 
 @media (min-width: 960px) {
   .typing {
-    width: 50%;
-    height: 100%;
-    scale: 0.5;
+    width: 25%;
+    height: 50%;
   }
 }
 

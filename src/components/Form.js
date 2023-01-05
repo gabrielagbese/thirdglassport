@@ -108,7 +108,7 @@ export default function Form() {
                         default
                     </p>
                     <div className="typing name-typing">
-                        <Lottie options={defaultOptions} width={100} height={50} />
+                        <Lottie options={defaultOptions} width={50} height={25} />
                     </div>
                 </div>
                 <div className='me-chat mail-me-chat'>
@@ -121,7 +121,7 @@ export default function Form() {
                         default
                     </p>
                     <div className="typing mail-typing">
-                        <Lottie options={defaultOptions} width={100} height={50} />
+                        <Lottie options={defaultOptions} width={50} height={25} />
                     </div>
                 </div>
                 <div className='me-chat message-me-chat'>
@@ -134,7 +134,7 @@ export default function Form() {
                         default
                     </p>
                     <div className="typing messages-typing">
-                        <Lottie options={defaultOptions} width={100} height={50} />
+                        <Lottie options={defaultOptions} width={50} height={25} />
                     </div>
                 </div>
 
