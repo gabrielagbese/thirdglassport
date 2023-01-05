@@ -1878,8 +1878,15 @@
 
 .typing{
     //position: absolute;
-    width: 50%;
-    height: 100%;
+    @include xs{
+        width: 50%;
+        height: 100%;
+    };
+    @include lg{
+        width: 50%;
+        height: 100%;
+        scale: 0.5;
+    };  
 }
 
 .chat-wrap-you{
