@@ -1602,6 +1602,7 @@
         width: 95%;
         height: 70%;
         margin-top: 2%;
+        // margin-bottom: -5%;
         border-radius: 15px 15px 0 0 ;
         background-color: rgba(0, 0, 0, 0.175);
     };
@@ -1737,12 +1738,18 @@
 
 .form-wrapper{
     width: 100%;
-    height: 90%;
     //border:thin solid red;
     border-radius: 15px 15px 0 0;
     margin-top: -0.25px;
     display: flex;
     flex-direction: column-reverse;
+
+    @include xs{
+        height: 98%;
+    };
+    @include lg{
+        height: 96%;
+    };
 }
 
 .input-wrapper{
@@ -1752,8 +1759,9 @@
 
 .chat{
     background-color: white;
-    border-radius: 25px;
+    border-radius: 35px;
     height: auto;
+    cursor: pointer;
     margin-left: 2.5%;
     min-width: 95%;
     display: flex;
@@ -1765,10 +1773,19 @@
     };
     @include md{
         padding-top: 0vh;
-        height: 7.5vh;
+        height: 8.5vh;
     };
 }
 
+.chatOne{
+    opacity: 0.25;
+    cursor: default !important;
+}
+
+.chatOne > input{
+    //opacity: 0.25;
+    cursor: pointer !important;
+}
 .chat-visible{
     display: block;
 }
@@ -1776,10 +1793,10 @@
     display: none;
 }
 
-.name-input, .mail-input, .message-input{
+.name-input, .mail-input, .message-input, .follow-up-input{
     
     width: 75%;
-    border-radius: 15px;
+    border-radius: 25px;
     color: orange;
     border: none;
     margin-left: 5%;
@@ -1787,15 +1804,17 @@
     @include xs{
         height: 5vh;
         font-size: 1em;
+        
     };
     @include md{
         height: 8.5vh;
         font-size: 1.15em;
+        margin-bottom: 0;
     };
     
 }
 
-.name-input:focus, .mail-input:focus, .message-input:focus{
+.name-input:focus, .mail-input:focus, .message-input:focus, .follow-up-input:focus{
     outline: none;
 }
 
@@ -1816,7 +1835,9 @@
 }
 .chat-display{
     width: 100%;
-    border: thin solid orange;
+    border-top: thin solid rgba(255, 255, 255, 0.2);
+    border-bottom: thin solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 0px 10px #0000005d;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -1834,18 +1855,26 @@
     opacity: 0;
     justify-content: center;
     display: none;
-    width: 39.5%;
     min-height: auto;
     margin: 1.25%;
     background-color: rgba(255, 255, 255, 0.45);
     border: 1.5px solid white;
     border-radius: 35px 35px 35px 0px;
     padding: 5px 25px 5px 25px;
+
+    @include xs{
+        width: 59.5%;
+        font-size: 0.85rem;
+    };
+
+    @include lg{
+        width: 39.5%;
+        font-size: 1rem;
+    }
 }
 .me-chat{
     opacity: 0;
     display: none;
-    width: 39.5%;
     min-height: auto;
     margin: 1.25%;
     align-self: flex-end;
@@ -1853,14 +1882,21 @@
     border: 1.5px solid rgb(228, 0, 253);
     border-radius: 35px 35px 0px 35px;
     padding: 5px 25px 5px 25px;
-    // align-items: center;
-    // justify-content: center;
+    @include xs{
+        width: 59.5%;
+        font-size: 0.8  5rem;
+    };
+
+    @include lg{
+        width: 39.5%;
+        font-size: 1rem;
+    }
 }
 
 .chat-text-wrap{
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    width: 90%;
+    width: 95%;
     //height: 80%;
     align-self: center;
     justify-self: center;
