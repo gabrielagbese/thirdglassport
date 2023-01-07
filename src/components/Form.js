@@ -68,7 +68,7 @@ export default function Form() {
     const messageEndRef = useRef(null)
 
     setTimeout(() => {
-        chatTl.to(".start-you-chat", { duration: 0.5, opacity: 1, delay: 0.5, display: "flex" })
+        chatTl.to(".start-you-chat", { duration: 1.5, opacity: 1, delay: 0.5, display: "flex" })
         chatTl.to(".start-typing", { duration: 0.5, display: "none" })
         chatTl.to(".chat-wrap-you-start", { duration: 0, opacity: 1, display: "flex" })
         chatTl.to(".start-me-chat", { duration: 0, opacity: 1,delay: 1, display: "block" })

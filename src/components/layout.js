@@ -349,8 +349,8 @@ function aboutSelect() {
     )
     tl10.fromTo(
       ".firstskills",
-      { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1.5, ease: "power2", y: "0%" }
+      { opacity: 0.3, y: "200%" },
+      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
     )
     // tl11.fromTo(
     //   ".swaptab",
