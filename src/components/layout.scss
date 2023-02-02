@@ -269,6 +269,7 @@
     @include xs {
         //border-right: 2.5px solid rgba(255, 255, 255, 0.2);
         border-radius: 15px 15px 0px 0px;
+        //border-right: thick solid white;
         width: 92.5%;
         height: 85%;
         //background-color: rgba(255, 255, 255, 0.05);
@@ -283,6 +284,7 @@
 }
 
 .aurora {
+    z-index: -1;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -317,6 +319,15 @@
         margin-left: -20%;
         filter: blur(102px);
     }
+}
+
+#ball2{
+    @include xs{
+        display: none
+    };
+    @include lg{
+        display: inline
+    };
 }
 
 .hero{
@@ -464,9 +475,9 @@
 
 .memoji{
     @include xs{
-        width: calc(100% - 10px);
+        width: 90%;
         height: auto;
-        transform: translate(7%,-10%)
+        transform: translate(7%,0%)
     };
     @include md{
         width: calc(90% - 15px);
@@ -513,7 +524,7 @@
     justify-self: flex-start;
     @include xs{
         font-size: 3rem;
-        height: 7.5vh;
+        height: 9.5vh;
     };
     @include lg{
         font-size: 5rem;
@@ -912,8 +923,8 @@
     
     &::-webkit-scrollbar-thumb {
         border-radius: 7.5px;
-        //background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0)95%);
-        background: white;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)95%);
+        //background: white;
     }
 }
 
@@ -1019,7 +1030,7 @@
     @include xs{
         flex-direction: row;
         width: 99%;
-        height: 70%;
+        height: 12.5vh;
         //border: thin solid yellow;
     }
     @include lg{

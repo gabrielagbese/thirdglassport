@@ -349,6 +349,7 @@
 }
 
 .aurora {
+  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,6 +393,18 @@
     margin-left: -20%;
     -webkit-filter: blur(102px);
             filter: blur(102px);
+  }
+}
+
+@media (min-width: 0px) {
+  #ball2 {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  #ball2 {
+    display: inline;
   }
 }
 
@@ -578,10 +591,10 @@
 
 @media (min-width: 0px) {
   .memoji {
-    width: calc(100% - 10px);
+    width: 90%;
     height: auto;
-    -webkit-transform: translate(7%, -10%);
-            transform: translate(7%, -10%);
+    -webkit-transform: translate(7%, 0%);
+            transform: translate(7%, 0%);
   }
 }
 
@@ -640,7 +653,7 @@
 @media (min-width: 0px) {
   .first-name {
     font-size: 3rem;
-    height: 7.5vh;
+    height: 9.5vh;
   }
 }
 
@@ -1119,7 +1132,8 @@
 
 .blurbio::-webkit-scrollbar-thumb {
   border-radius: 7.5px;
-  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(95%, rgba(255, 255, 255, 0.5)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 95%);
 }
 
 .bio {
@@ -1250,7 +1264,7 @@
         -ms-flex-direction: row;
             flex-direction: row;
     width: 99%;
-    height: 70%;
+    height: 12.5vh;
   }
 }
 
