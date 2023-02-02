@@ -20,12 +20,12 @@ const Hero = ({ fn }) => {
                 <div className="hero">
                     <div className="hero-underlier">
                         <div className="hero-light"></div>
-                        <div className="hero-stars">
+                        {/* <div className="hero-stars">
                             <div class="starsi"></div>
                             <div class="twinkling"></div>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className="herowrapper ">
+                    <div className="herowrapper">
                         <div className="top-space"></div>
                         {/* <div className="hey-there">Hello there, I'm-</div> */}
                         <div className="first-name">Gabriel Agbese</div>
