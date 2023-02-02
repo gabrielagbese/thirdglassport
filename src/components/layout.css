@@ -104,6 +104,7 @@
 @media (min-width: 960px) {
   .content2 {
     height: 85%;
+    overflow: hidden;
   }
 }
 
@@ -627,6 +628,10 @@
 }
 
 .first-name {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fcfcfc99));
+  background: linear-gradient(to bottom, #ffffff, #fcfcfc99 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   width: 100%;
   font-weight: 700;
   justify-self: flex-start;
@@ -1103,18 +1108,18 @@
 }
 
 .blurbio::-webkit-scrollbar {
-  width: 15px;
+  width: 5px;
 }
 
 .blurbio::-webkit-scrollbar-track {
   border-radius: 7.5px;
-  -webkit-box-shadow: inset 0 0 10px rgba(155, 155, 155, 0.25);
-          box-shadow: inset 0 0 10px rgba(155, 155, 155, 0.25);
+  -webkit-box-shadow: inset 0 0 10px rgba(155, 155, 155, 0);
+          box-shadow: inset 0 0 10px rgba(155, 155, 155, 0);
 }
 
 .blurbio::-webkit-scrollbar-thumb {
   border-radius: 7.5px;
-  background-color: rgba(155, 155, 155, 0.35);
+  background: white;
 }
 
 .bio {
@@ -1309,7 +1314,7 @@
 }
 
 .bio-content {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   padding: 5px;
   overflow: auto;
 }
