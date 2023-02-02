@@ -109,6 +109,48 @@ const Layout = ({ children }) => {
 
     console.log("eye ran")
   })
+
+  function checkAbout() {
+    if (active === "aboutCard") {
+      setActive("heroCard")
+    } else {
+      setActive("aboutCard");
+      var contentlight = document.getElementsByClassName("content")[0]
+      contentlight.style.opacity = 1
+      setTimeout(() => {
+        aboutSelect()
+        changeColor("#0000ff", "#b90adc", "#0000ff")
+      }, 0.1)
+    }
+  }
+
+  function checkProjects() {
+    if (active === "projectsCard") {
+      setActive("heroCard")
+    } else {
+      setActive("projectsCard");
+      var contentlight = document.getElementsByClassName("content")[0]
+      contentlight.style.opacity = 1
+      setTimeout(() => {
+        projectSelect()
+        changeColor("#00ffc8", "#00ffee", "#0325ff")
+      }, 0.1)
+    }
+  }
+
+  function checkContact() {
+    if (active === "contactCard") {
+      setActive("heroCard")
+    } else {
+      setActive("contactCard");
+      var contentlight = document.getElementsByClassName("content")[0]
+      contentlight.style.opacity = 1
+      setTimeout(() => {
+        contactSelect()
+        changeColor("#00d3fe", "#1500fb", "#ff0095")
+      }, 0.1)
+    }
+  }
   //moveEye();
 
   return (
@@ -166,14 +208,8 @@ const Layout = ({ children }) => {
         <div className="nav">
           <span
             onClick={() => {
-              darken()
-              setActive("aboutCard")
-              var contentlight = document.getElementsByClassName("content")[0]
-              contentlight.style.opacity = 1
-              setTimeout(() => {
-                aboutSelect()
-                changeColor(" #0000ff", "#6b0080", "#0000ff")
-              }, 0.1)
+              darken();
+              checkAbout()
             }}
             className="navspan"
           >
@@ -183,14 +219,8 @@ const Layout = ({ children }) => {
 
           <span
             onClick={() => {
-              darken()
-              setActive("projectsCard")
-              var contentlight = document.getElementsByClassName("content")[0]
-              contentlight.style.opacity = 1
-              setTimeout(() => {
-                projectSelect()
-                changeColor("#06725B", "#08ECDC", "#011ED9")
-              }, 0.1)
+              darken();
+              checkProjects();
             }}
             className="navspan"
           >
@@ -199,14 +229,8 @@ const Layout = ({ children }) => {
           </span>
           <span
             onClick={() => {
-              darken()
-              setActive("contactCard")
-              var contentlight = document.getElementsByClassName("content")[0]
-              contentlight.style.opacity = 1
-              setTimeout(() => {
-                contactSelect()
-                changeColor("#11d9ff", "#3322ff", "#dc0080")
-              }, 0.1)
+              darken();
+              checkContact();
             }}
             className="navspan"
           >
@@ -219,13 +243,16 @@ const Layout = ({ children }) => {
   )
 }
 
+//active page checker
+
+
 //eyeball
 
 //movement
 function changeColor(color1, color2, color3) {
   var ball1 = document.getElementById("ball1")
   var ball2 = document.getElementById("ball2")
-  var colorIntensity = "d2"
+  var colorIntensity = "ff"
 
   ball1.style.background =
     "linear-gradient(to left, " +

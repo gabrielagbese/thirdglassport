@@ -27,7 +27,7 @@ const Hero = ({ fn }) => {
                     </div>
                     <div className="herowrapper ">
                         <div className="top-space"></div>
-                        <div className="hey-there">Hello there, I'm-</div>
+                        {/* <div className="hey-there">Hello there, I'm-</div> */}
                         <div className="first-name">Gabriel Agbese</div>
                         <div className="description">Frontend Developer</div>
                         <div className="opportunity">

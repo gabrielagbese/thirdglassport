@@ -248,7 +248,7 @@ export default function Form() {
 
                 <div className='you-chat name-you-chat'>
                     <p className='chat-wrap-you chat-wrap-you-name'>
-                        Nice to meet you &#x1F44B;
+                        Nice to meet you {name} &#x1F44B;
                     </p>
                     <div className="typing name-typing">
                         <Lottie options={defaultOptions} width={75} height={37.5} />
