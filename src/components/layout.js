@@ -401,7 +401,7 @@ function aboutSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%", backgroundColor:"#f6f6f600" },
-      { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#ffffff38"  }
+      { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#b2b2b25c"  }
     )
 	tl1.to(".eyewrapper", { opacity: 0.8 })
     tl2.fromTo(
