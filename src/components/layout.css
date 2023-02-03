@@ -937,9 +937,9 @@
 
 @media (min-width: 0px) {
   .section {
-    margin-left: 4%;
+    margin-left: 3.75%;
     margin-top: 8vh;
-    width: 92.5%;
+    width: 92.25%;
     height: 67vh;
     overflow-x: hidden;
   }
@@ -2009,7 +2009,7 @@ input:checked + .slider:before {
         -ms-grid-row-align: center;
         align-self: center;
     width: 95%;
-    height: 70%;
+    height: 71%;
     margin-top: 2%;
     border-radius: 15px 15px 0 0;
     background-color: rgba(0, 0, 0, 0.175);
