@@ -401,7 +401,7 @@ function aboutSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%", backgroundColor:"#f6f6f600" },
-      { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#e0dcb755"  }
+      { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#b7b8e055"  }
     )
 	tl1.to(".eyewrapper", { opacity: 0.8 })
     tl2.fromTo(
@@ -483,8 +483,8 @@ function projectSelect() {
     tl5.to(".ball", { opacity: 0, duration: 0.1 })
     tl1.fromTo(
       ".cardwrapper",
-      { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1.5, y: "0%" }
+      { opacity: 0.3, y: "100%", backgroundColor:"#f6f6f600" },
+      { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#b7b8e055"  }
     )
 
 	tl15.to(".eyewrapper", { opacity: 0.8 })
@@ -535,8 +535,8 @@ function contactSelect() {
     tl5.to(".ball", { opacity: 0, duration: 0.1 })
     tl1.fromTo(
       ".cardwrapper",
-      { opacity: 0.3, y: "100%" },
-      { opacity: 1, duration: 1.25, y: "0%" }
+      { opacity: 0.3, y: "100%", backgroundColor:"#f6f6f600" },
+      { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#b7b8e055"  }
     )
     // tl2.fromTo(
     //   ".contactside",
