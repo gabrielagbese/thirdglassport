@@ -292,7 +292,7 @@ export default function Form() {
                 </div>
                 <div className='you-chat message-you-chat'>
                     <p className='chat-wrap-you chat-wrap-you-message'>
-                        Thanks! &#x1F64F;
+                        Alright!
                     </p>
                     <div className="typing messages-typing">
                         <Lottie options={defaultOptions} width={75} height={37.5} />
@@ -300,7 +300,7 @@ export default function Form() {
                 </div>
                 <div className='you-chat message-you-chat-2'>
                     <p className='chat-wrap-you chat-wrap-you-message-2'>
-                        anything else you want to tell me?
+                        Anything else you want to tell me?
                     </p>
                     <div className="typing messages-typing-2">
                         <Lottie options={defaultOptions} width={75} height={37.5} />
