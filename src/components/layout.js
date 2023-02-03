@@ -110,9 +110,12 @@ const Layout = ({ children }) => {
     console.log("eye ran")
   })
 
+  let hideEye = gsap.timeline();
+
   function checkAbout() {
     if (active === "aboutCard") {
       setActive("heroCard")
+      hideEye.to(".eyewrapper", { opacity: 0 })
     } else {
       setActive("aboutCard");
       var contentlight = document.getElementsByClassName("content")[0]
@@ -127,13 +130,15 @@ const Layout = ({ children }) => {
   function checkProjects() {
     if (active === "projectsCard") {
       setActive("heroCard")
+      hideEye.to(".eyewrapper", { opacity: 0 })
     } else {
       setActive("projectsCard");
       var contentlight = document.getElementsByClassName("content")[0]
       contentlight.style.opacity = 1
       setTimeout(() => {
         projectSelect()
-        changeColor("#00ffc8", "#00ffee", "#0325ff")
+        changeColor("#00d3fe", "#1500fb", "#ff009f")
+        
       }, 0.1)
     }
   }
@@ -141,13 +146,14 @@ const Layout = ({ children }) => {
   function checkContact() {
     if (active === "contactCard") {
       setActive("heroCard")
+      hideEye.to(".eyewrapper", { opacity: 0 })
     } else {
       setActive("contactCard");
       var contentlight = document.getElementsByClassName("content")[0]
       contentlight.style.opacity = 1
       setTimeout(() => {
         contactSelect()
-        changeColor("#00d3fe", "#1500fb", "#ff0095")
+        changeColor("#Ff009f", "#00ffee", "#0325ff")
       }, 0.1)
     }
   }
@@ -163,12 +169,6 @@ const Layout = ({ children }) => {
               setActive("heroCard")
 			  var tl19 = gsap.timeline()
 			  tl19.to(".eyewrapper", { opacity: 0 })
-            //   var contentlight = document.getElementsByClassName("content")[0]
-            //   contentlight.style.opacity = 1
-            //   setTimeout(() => {
-            //     aboutSelect()
-            //     changeColor(" #0000ff", "#6b0080", "#0000ff")
-            //   }, 0.1)
             }}>
             <div className="eye eye1">
               <div className="pupil"></div>
@@ -359,25 +359,25 @@ function aboutSelect() {
     tl1.to(".eyewrapper", { opacity: 0.8 })
     tl2.fromTo(
       ".links",
-      { opacity: 0.3, y: "-100%" },
-      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
+      { opacity: 0, y:-50},
+      { opacity: 1, duration: 1.75, ease: "power2", y:0}
     )
     tl3.fromTo(
       ".subcard3",
       { opacity: 0.3, y: "-100%" },
-      { opacity: 1, duration: 1.5, ease: "power2", y: "0%" }
+      { opacity: 1, duration: 1.75, ease: "power2", y: "0%" }
     )
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     tl7.fromTo(".subcard3", { opacity: 0.3 }, { opacity: 1 })
     tl9.fromTo(
       ".biotext",
-      { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
+      { opacity: 0, y: "160%" },
+      { opacity: 1, duration: 1.75, ease: "power2", y: "0%" }
     )
     tl10.fromTo(
       ".firstskills",
-      { opacity: 0.3, y: "200%" },
-      { opacity: 1, duration: 2.5, ease: "power2", y: "0%" }
+      { opacity: 0.3, y: "100%" },
+      { opacity: 1, duration: 1.75, ease: "power2", y: "0%" }
     )
     // tl11.fromTo(
     //   ".swaptab",
@@ -469,8 +469,8 @@ function projectSelect() {
 
     tl15.fromTo(
       ".projectside",
-      { opacity: 0, x: "-75%" },
-      { opacity: 1, duration: 1.5, x: "0%" }
+      { opacity: 0, x: "-40%" },
+      { opacity: 1, duration: 1.35, x: "0%" }
     )
     tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
     tl15.fromTo(".projectside-content", { opacity: 0 }, { opacity: 1, duration: 1 })
@@ -516,7 +516,12 @@ function contactSelect() {
       { opacity: 1, duration: 1.25, y: "0%" }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
-    tl8.fromTo(".contactside", { opacity: 0 }, { opacity: 1, delay: 1.15})
+    //tl8.fromTo(".contactside", { opacity: 0 }, { opacity: 1, delay: 1.15})
+    tl8.fromTo(
+      ".contactside",
+      { opacity: 1, y: "119%" },
+      { opacity: 1, duration: 1.25, y: "0%" }
+    )
     tl7.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
@@ -533,6 +538,11 @@ function contactSelect() {
       { opacity: 0.3, y: "100%" },
       { opacity: 1, duration: 1.25, y: "0%" }
     )
+    // tl2.fromTo(
+    //   ".contactside",
+    //   { opacity: 0.3, y: "100%" },
+    //   { opacity: 1, duration: 1.25, y: "0%" }
+    // )
 
 	tl1.to(".eyewrapper", { opacity: 0.8 })
     tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 0.5 })
