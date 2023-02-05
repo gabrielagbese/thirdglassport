@@ -9,12 +9,19 @@ export default function Dino() {
         const worldElem = document.querySelector('[data-world]')
         const WORLD_WIDTH = 100;
         const WORLD_HEIGHT = 30;
+
+        setPixelsToWorldScale()
+        window.addEventListener("resize",setPixelsToWorldScale())
+        console.log("we:"+worldElem)
     
         function setPixelsToWorldScale() {
             let worldToPixelScale;
-            if(window.innerWidth/window.innerHeight < WORLD_WIDTH/WORLD_HEIGHT){
+
+            if(window.innerWidth / window.innerHeight < WORLD_WIDTH / WORLD_HEIGHT)
+            {
                 worldToPixelScale = (window.innerWidth / WORLD_WIDTH)*0.80;
-            }else{
+            }else
+            {
                 worldToPixelScale = (window.innerHeight / WORLD_HEIGHT)*0.95;
             }
     
@@ -22,9 +29,7 @@ export default function Dino() {
             worldElem.style.height = WORLD_HEIGHT * worldToPixelScale + "px";
         }
         
-        setPixelsToWorldScale()
-        window.addEventListener("resize",setPixelsToWorldScale())
-        console.log("we:"+worldElem)
+        
     },);
     
   return (

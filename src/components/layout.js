@@ -112,7 +112,7 @@ const Layout = ({ children }) => {
 
   let hideEye = gsap.timeline();
 
-  var contentlight = document.getElementsByClassName("content")[0]
+  //var contentlight = document.getElementsByClassName("content")[0]
   //contentlight.style.opacity = 1
 
   function checkAbout() {
