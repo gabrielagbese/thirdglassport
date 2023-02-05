@@ -104,6 +104,7 @@
 }
 
 .nav {
+    z-index: 100;
     display: flex;
     align-items: center;
     font-weight: 200;
@@ -348,7 +349,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    //background-color: #2195f33f;
+    border: thin solid red;
     @include xs{
         margin-top: 10%;
         width: 100%;
@@ -362,7 +363,7 @@
         //margin-top: 60%;
         scale: 1.05;
         width: 80%;
-        height: 95%;
+        height: 100%;
     };
 }
 
@@ -471,6 +472,86 @@
         height: 95%;
     };
 }
+
+.dino-wrapper{
+    width: 100%;
+    height: 100%;
+    border: thin solid green;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.above-nav{
+    width: 100%;
+    height: 80%;
+    border: thin solid red;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.world{
+    overflow: hidden;
+    position: relative;
+    border: thin solid yellow; 
+}
+
+.score{
+    position: absolute;
+    font-size: 3vmin;
+    right: 1vmin;
+    top: 1vmin;
+}
+
+.start-screen{
+    position: absolute;
+    font: 5vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hide{
+    display: none;
+}
+
+.ground{
+    position: absolute;
+    width: 200%;
+    bottom: 0;
+    left: calc(var(--left) * 1%);
+    @include lg{
+        width: 300%;
+    }
+}
+
+.dino{
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+    @include lg{
+        height: 30%;
+    }
+}
+
+.cactus{
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
+    @include lg{
+        height: 30%;
+    }
+}
+.below-nav{
+    width: 100%;
+    height: 20%;
+    
+}
+
+
 
 
 .memoji{
@@ -1325,7 +1406,7 @@
         border-bottom: 1.25px solid rgba(255, 255, 255, 0.135);
     };
     @include lg{
-        position: absolute;
+        position: fixed;
         width: 30%;
         height: 72.2%;
         justify-content: space-between;
@@ -1341,7 +1422,7 @@
         backdrop-filter: blur(58px);
         transform: translate3d(0, 0, 0);
         transform: translateZ(0);
-        box-shadow: inset 0 -90px 90px -90px rgba(0, 0, 0, 0.4);
+        box-shadow: 10px -3px 17px 0px rgba(0,0,0,0.25),inset 0 -90px 90px -90px rgba(0, 0, 0, 0.4);
     };
   }
 

@@ -112,14 +112,16 @@ const Layout = ({ children }) => {
 
   let hideEye = gsap.timeline();
 
+  var contentlight = document.getElementsByClassName("content")[0]
+  //contentlight.style.opacity = 1
+
   function checkAbout() {
     if (active === "aboutCard") {
       setActive("heroCard")
       hideEye.to(".eyewrapper", { opacity: 0 })
     } else {
       setActive("aboutCard");
-      var contentlight = document.getElementsByClassName("content")[0]
-      contentlight.style.opacity = 1
+      
       setTimeout(() => {
         aboutSelect()
         changeColor("#0000ff", "#b90adc", "#0000ff")
@@ -133,8 +135,7 @@ const Layout = ({ children }) => {
       hideEye.to(".eyewrapper", { opacity: 0 })
     } else {
       setActive("projectsCard");
-      var contentlight = document.getElementsByClassName("content")[0]
-      contentlight.style.opacity = 1
+      
       setTimeout(() => {
         projectSelect()
         changeColor("#00d3fe", "#1500fb", "#ff009f")
@@ -149,8 +150,7 @@ const Layout = ({ children }) => {
       hideEye.to(".eyewrapper", { opacity: 0 })
     } else {
       setActive("contactCard");
-      var contentlight = document.getElementsByClassName("content")[0]
-      contentlight.style.opacity = 1
+      
       setTimeout(() => {
         contactSelect()
         changeColor("#Ff009f", "#00ffee", "#0325ff")
@@ -167,8 +167,8 @@ const Layout = ({ children }) => {
           <div className="eyewrapper" onClick={() => {
               darken()
               setActive("heroCard")
-			  var tl19 = gsap.timeline()
-			  tl19.to(".eyewrapper", { opacity: 0 })
+              var tl19 = gsap.timeline()
+              tl19.to(".eyewrapper", { opacity: 0 })
             }}>
             <div className="eye eye1">
               <div className="pupil"></div>
@@ -182,6 +182,8 @@ const Layout = ({ children }) => {
           </div>
           
         </div>
+
+        {/* back card */}
         <div className="cardwrapper ">
           <div className="aurora">
             <div className="ball " id="ball1"></div>
@@ -198,7 +200,7 @@ const Layout = ({ children }) => {
       <div className="contentlayer">
         <div className="content">
           {/* setup react router */}
-		  {active === "heroCard" && <Hero />}
+		      {active === "heroCard" && <Hero />}
           {active === "aboutCard" && <About />}
           {active === "projectsCard" && <Projects />}
           {active === "contactCard" && <Contact />}
@@ -208,8 +210,10 @@ const Layout = ({ children }) => {
         <div className="nav">
           <span
             onClick={() => {
-              darken();
-              checkAbout()
+              setTimeout(()=>{
+                darken();
+                checkAbout();
+              },0.1)
             }}
             className="navspan"
           >
@@ -219,8 +223,10 @@ const Layout = ({ children }) => {
 
           <span
             onClick={() => {
-              darken();
-              checkProjects();
+              setTimeout(()=>{
+                darken();
+                checkProjects();
+              },0.1)
             }}
             className="navspan"
           >
@@ -229,8 +235,10 @@ const Layout = ({ children }) => {
           </span>
           <span
             onClick={() => {
-              darken();
-              checkContact();
+              setTimeout(()=>{
+                darken();
+                checkContact();
+              },0.1)
             }}
             className="navspan"
           >
@@ -280,18 +288,8 @@ function changeColor(color1, color2, color3) {
   console.log("color changed")
 }
 
-function moveBall1() {
-  // var tl = gsap.timeline({ repeat: -1 })
-  // tl.to("#ball1", 3, { x: 170, yoyo: true, repeat: 1 })
-  // tl.to("#ball1", 3, { y: -170, yoyo: true, repeat: 1 })
-}
-function moveBall2() {
-  // var tl = gsap.timeline({ repeat: -1 })
-  // tl.to("#ball2", 3, { y: 200, yoyo: true, repeat: 1 })
-  // tl.to("#ball1", 3, { x: -150, yoyo: true, repeat: 1 })
-}
-
-var ballIsMoving
+function moveBall1() {}
+function moveBall2() {}
 
 function popup() {
   document.querySelector(".alert").style.display = "block"
@@ -319,6 +317,8 @@ var tl14 = gsap.timeline()
 
 //project timelines
 
+var ballIsMoving
+
 var tl15 = gsap.timeline()
 var tl16 = gsap.timeline()
 var tl17 = gsap.timeline()
@@ -327,9 +327,11 @@ function firstMoveBalls() {
   setTimeout(() => {
     moveBall1()
     moveBall2()
-    tl5.to(".ball", { opacity: 1 })
+    // var contentlight = document.getElementsByClassName("content")[0]
+    //contentlight.style.opacity = 1
+    //tl5.to(".ball", { opacity: 1 })
     moveBalls()
-  }, 3000)
+  }, 2000)
   ballIsMoving = "true"
 }
 function moveBalls() {
@@ -340,14 +342,14 @@ function moveBalls() {
 }
 
 function darken() {
-  var cardlight = document.getElementsByClassName("cardwrapper")[0]
-
+  var cardlight = document.getElementsByClassName("cardwrapper")[0];
   console.log(cardlight.style.opacity, "opacity")
   cardlight.style.opacity = 0
 }
 
 function aboutSelect() {
-  darken()
+  tl5.clear();
+  tl1.clear();
   if (window.innerWidth >= 720) {
     //disapearing colors tween
     tl5.to(".ball", { opacity: 0, duration: 0.1 })
@@ -448,7 +450,8 @@ function aboutSelect() {
 }
 
 function projectSelect() {
-  darken()
+  tl5.clear();
+  tl1.clear();
   if (window.innerWidth >= 720) {
     //disapearing colors tween
     tl5.to(".ball", { opacity: 0, duration: 0.1 })
@@ -467,10 +470,10 @@ function projectSelect() {
       { opacity: 1, duration: 1.5, x: "0%" }
     )
 
-    tl15.fromTo(
+    tl3.fromTo(
       ".projectside",
-      { opacity: 0, x: "-40%" },
-      { opacity: 1, duration: 1.35, x: "0%" }
+      { opacity: 0,  },
+      { opacity: 1, duration: 1.5,delay:1.25 }
     )
     tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
     tl15.fromTo(".projectside-content", { opacity: 0 }, { opacity: 1, duration: 1 })
@@ -487,7 +490,7 @@ function projectSelect() {
       { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#b7b8e055"  }
     )
 
-	tl15.to(".eyewrapper", { opacity: 0.8 })
+	  tl15.to(".eyewrapper", { opacity: 0.8 })
 
     tl6.fromTo(".visible", { opacity: 0 }, { opacity: 1 })
     //tl6.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1.5 })
@@ -507,7 +510,8 @@ function projectSelect() {
 }
 
 function contactSelect() {
-  darken()
+  tl5.clear();
+  tl1.clear();
   if (window.innerWidth >= 720) {
     tl5.to(".ball", { opacity: 0, duration: 0.1 })
     tl1.fromTo(
@@ -517,15 +521,15 @@ function contactSelect() {
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
     //tl8.fromTo(".contactside", { opacity: 0 }, { opacity: 1, delay: 1.15})
-    tl8.fromTo(
+    tl16.fromTo(
       ".contactside",
-      { opacity: 1, y: "119%" },
-      { opacity: 1, duration: 1.25, y: "0%" }
+      { opacity: 0, y: "119.5%" },
+      { opacity: 1, duration: 1.24, y: "0%"}
     )
     tl7.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1.25, y: "0%" ,delay: 1.5}
+      { opacity: 1, duration: 1.25, y: "0%" ,delay: 0.25}
     )
     tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 

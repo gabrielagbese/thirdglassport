@@ -8,6 +8,8 @@ import { useState } from "react";
 import Typewriter from 'typewriter-effect';
 import TextAnimation from "react-text-animations";
 
+import Dino from "./Dino";
+
 const Hero = ({ fn }) => {
 
     useEffect(() => {
@@ -19,7 +21,8 @@ const Hero = ({ fn }) => {
             <div className="content2">
                 <div className="hero">
                     <div className="hero-underlier">
-                        <div className="hero-light"></div>
+                        {/* <div className="hero-light"></div> */}
+                        <Dino />
                         {/* <div className="hero-stars">
                             <div class="starsi"></div>
                             <div class="twinkling"></div>
