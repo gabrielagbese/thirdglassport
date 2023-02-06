@@ -306,7 +306,7 @@
 .ball {
     opacity: 0;
     margin: 50px;
-    width: 57vh;
+    width: 45vh;
     height: 67vh;
     border-radius: 40%;
     background: linear-gradient(90deg,
@@ -357,7 +357,7 @@
     };
     @include md{
         width: 75%;
-        height: 65%;
+        height: 95%;
     };
     @include lg{
         //margin-top: 60%;
@@ -493,7 +493,7 @@
 .world{
     overflow: hidden;
     position: relative;
-    border: thin solid yellow; 
+    outline: thin solid yellow;  
 }
 
 .score{
@@ -517,19 +517,17 @@
 
 .ground{
     position: absolute;
-    width: 200%;
+    width: 300%;
     bottom: 0;
     left: calc(var(--left) * 1%);
-    @include lg{
-        width: 300%;
-    }
+    
 }
 
 .dino{
     --bottom: 0;
     position: absolute;
     left: 1%;
-    height: 30%;
+    height: 60%;
     bottom: calc(var(--bottom) * 1%);
     @include lg{
         height: 30%;
@@ -539,7 +537,7 @@
 .cactus{
     position: absolute;
     left: calc(var(--left) * 1%);
-    height: 30%;
+    height: 60%;
     bottom: 0;
     @include lg{
         height: 30%;
@@ -694,13 +692,14 @@
 }
 
 .planet{
+    //border: 1.5px solid #14599296;
     z-index: 1;
+    filter: blur(20px);
     @include xs{
         width: 70vh;
         height: 30vh;
         transform: translateY(45%);
         border-radius: 50% 50% 50% 50%;
-        border: 1.5px solid #14599296;
         background-image: linear-gradient(to bottom  , #1a5d9443 , black 50%);
     };
     @include md{
@@ -708,16 +707,14 @@
         height: 45vh;
         transform: translateY(80.5%);
         border-radius: 50% 50% 50% 50%;
-        border: 1.5px solid #14599296;
         background-image: linear-gradient(to bottom  , #1a5d9433 , black 50%);
     };
     @include lg{
         margin-top: -6%;
         width: 100vh;
-        height: 40vh;
+        height: 60vh;
         transform: translateY(75.5%);
         //border-radius: 50% 50% 50% 50%;
-        border: 1.5px solid #14599296;
         background-image: linear-gradient(to bottom  , #1a5d9433 , black 50%);
     };
 }
@@ -1526,7 +1523,7 @@
         height: 30px;
     };
     @include lg{
-        min-width: 20%;
+        min-width: 13%;
         height: 30px;
     };
 }
@@ -1815,13 +1812,15 @@
     margin-top: -0.25px;
     display: flex;
     flex-direction: column-reverse;
-    background: linear-gradient(to bottom, #00000030 20%, #00000001);
+    
 
     @include xs{
         height: 98%;
+        background: linear-gradient(to bottom, #00000030 20%, #00000001);
     };
     @include lg{
         height: 96%;
+        background: linear-gradient(to bottom, #00000050 20%, #00000010);
     };
 }
 

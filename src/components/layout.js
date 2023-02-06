@@ -476,7 +476,7 @@ function projectSelect() {
       { opacity: 1, duration: 1.5,delay:1.25 }
     )
     tl15.fromTo(".bigtext", { opacity: 0 }, { opacity: 1, duration: 1 })
-    tl15.fromTo(".projectside-content", { opacity: 0 }, { opacity: 1, duration: 1 })
+    tl15.fromTo(".projectside-content", { opacity: 0 }, { opacity: 1, duration: 0 })
     firstMoveBalls()
     setTimeout(() => {
       tl1.fromTo(".classname", { opacity: 0 }, { opacity: 1, duration: 2 })
@@ -529,7 +529,7 @@ function contactSelect() {
     tl7.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1.25, y: "0%" ,delay: 0.25}
+      { opacity: 1, duration: 1.25, y: "0%" ,delay: 1.25}
     )
     tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 

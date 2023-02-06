@@ -11,18 +11,18 @@ export default function Dino() {
         const WORLD_HEIGHT = 30;
 
         setPixelsToWorldScale()
-        window.addEventListener("resize",setPixelsToWorldScale())
+        //window.addEventListener("resize",setPixelsToWorldScale())
         console.log("we:"+worldElem)
     
         function setPixelsToWorldScale() {
             let worldToPixelScale;
 
-            if(window.innerWidth / window.innerHeight < WORLD_WIDTH / WORLD_HEIGHT)
+            if(window.innerWidth / window.innerHeight > 1)
             {
-                worldToPixelScale = (window.innerWidth / WORLD_WIDTH)*0.80;
+                worldToPixelScale = (window.innerWidth / WORLD_WIDTH)*0.75;
             }else
             {
-                worldToPixelScale = (window.innerHeight / WORLD_HEIGHT)*0.95;
+                worldToPixelScale = (window.innerWidth / WORLD_WIDTH)*1;
             }
     
             worldElem.style.width = WORLD_WIDTH * worldToPixelScale + "px";
