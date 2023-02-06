@@ -57,14 +57,18 @@ const About = ({ fn }) => {
                         <div className="linksbio">
                             <div className="links midtext"><img src={memoji} alt="BigCo Inc. logo" className="memoji" /></div>
                             <div className="biotext smalltext">
-                                <div className="about-button blur midtext">
-                                    <p className="smidtext"><a className="default-link" href="https://www.linkedin.com/in/gabriel-agbese/" target="_blank">Linkedin</a></p>
-                                    <SlSocialLinkedin className="icon" />
+                                <a className="default-link blur" href="https://www.linkedin.com/in/gabriel-agbese/" target="_blank">
+                                    <div className="about-button midtext">
+                                        <p className="smidtext">Linkedin</p>
+                                        <SlSocialLinkedin className="icon" />
+                                    </div>
+                                </a>
+                                <a className="default-link blur" href="./CV-December-2023(2).pdf" target="_blank">
+                                <div className="about-button  midtext">
+                                        <p className="smidtext">Resume</p>
+                                        <CgFileDocument className="icon" />
                                 </div>
-                                <div className="about-button blur midtext">
-                                    <p className="smidtext"><a className="default-link" href="./CV-December-2023(2).pdf" target="_blank">Resume</a></p>
-                                    <CgFileDocument className="icon" />
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div className="firstskills blur smalltext">

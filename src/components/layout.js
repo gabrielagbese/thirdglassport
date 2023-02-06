@@ -458,7 +458,7 @@ function projectSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%", backgroundColor:"#f6f6f600" },
-      { opacity: 1, duration: 1.25, y: "0%",backgroundColor:"#b7b8e044"  }
+      { opacity: 1, duration: 1.25, y: "0%",backgroundColor:"#b7b8e057"  }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
 
@@ -524,18 +524,19 @@ function contactSelect() {
     tl16.fromTo(
       ".contactside",
       { opacity: 0, y: "119.5%" },
-      { opacity: 1, duration: 1.24, y: "0%"}
+      { opacity: 1, duration: 1.25, y: "0%"}
     )
     tl7.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
-      { opacity: 1, duration: 1.25, y: "0%" ,delay: 1.25}
+      { opacity: 1, duration: 1.25, y: "0%" ,delay: 1}
     )
     tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     firstMoveBalls()
-  } else {
+  } 
+  else {
     tl5.to(".ball", { opacity: 0, duration: 0.1 })
     tl1.fromTo(
       ".cardwrapper",

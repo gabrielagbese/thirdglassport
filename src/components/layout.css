@@ -331,6 +331,15 @@
 .default-link {
   text-decoration: none;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 0px) {
@@ -1147,6 +1156,7 @@
   .side {
     height: 30%;
     width: 99%;
+    margin-bottom: 2.5%;
   }
 }
 
@@ -1181,6 +1191,23 @@
     background-size: contain;
     background-repeat: repeat;
     border: 1px solid rgba(178, 164, 135, 0.3);
+  }
+}
+
+.biotext > .blur {
+  width: 99%;
+  margin-bottom: 5%;
+}
+
+@media (min-width: 0px) {
+  .biotext > .blur {
+    height: 50%;
+  }
+}
+
+@media (min-width: 960px) {
+  .biotext > .blur {
+    height: 30%;
   }
 }
 
@@ -1545,9 +1572,6 @@
 }
 
 .about-button {
-  margin-bottom: 7%;
-  border: thin solid rgba(191, 183, 153, 0.35);
-  background-color: #121112b8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1571,8 +1595,8 @@
 @media (min-width: 960px) {
   .about-button {
     width: 92%;
-    height: 22%;
-    padding: 5px 8px;
+    height: 18%;
+    padding: 5px 3px;
   }
 }
 
@@ -2491,8 +2515,8 @@ input:checked + .slider:before {
   margin: 1.25%;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  background-color: rgba(221, 0, 255, 0.35);
-  border: 1.5px solid #e400fd;
+  background-color: #7582daa1;
+  border: 1.5px solid #0325ff77;
   border-radius: 35px 35px 0px 35px;
   padding: 5px 25px 5px 25px;
 }

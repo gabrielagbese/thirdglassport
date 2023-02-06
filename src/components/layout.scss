@@ -264,6 +264,10 @@
 .default-link{
     text-decoration: none;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .cardwrapper {
@@ -939,6 +943,7 @@
     @include xs{
         height: 30%;
         width: 99%;
+        margin-bottom: 2.5%;
         //border: thin solid green;
     };
     @include lg{
@@ -964,6 +969,16 @@
         background-size: contain;
         background-repeat: repeat;
         border: 1px solid rgba(178, 164, 135, 0.3);
+    };
+}
+.biotext > .blur{
+    width: 99%;
+    margin-bottom: 5%;
+    @include xs{
+        height: 50%;
+    };
+    @include lg{
+        height: 30%;
     };
 }
 
@@ -1138,7 +1153,6 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-    
     width: 60%;
     height: 100%;
     //margin-bottom: 12px;
@@ -1240,10 +1254,6 @@
 }
 
 .about-button{
-    
-    margin-bottom: 7%;
-    border: thin solid rgba(191, 183, 153, 0.35);
-    background-color: #121112b8;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1256,8 +1266,8 @@
     };
     @include lg{
         width: 92%;
-        height: 22%;
-        padding: 5px 8px;
+        height: 18%;
+        padding: 5px 3px;
     };
 }
 
@@ -1950,8 +1960,8 @@
     min-height: auto;
     margin: 1.25%;
     align-self: flex-end;
-    background-color: rgba(221, 0, 255, 0.35);
-    border: 1.5px solid rgb(228, 0, 253);
+    background-color: #7582daa1;
+    border: 1.5px solid #0325ff77;
     border-radius: 35px 35px 0px 35px;
     padding: 5px 25px 5px 25px;
     @include xs{
