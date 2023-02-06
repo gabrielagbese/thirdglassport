@@ -467,7 +467,7 @@ function projectSelect() {
     tl15.fromTo(
       ".projectcontent",
       { opacity: 0.3, x: "100%" },
-      { opacity: 1, duration: 1.5, x: "0%" }
+      { opacity: 1, duration: 2, x: "0%" }
     )
 
     tl3.fromTo(
@@ -549,13 +549,13 @@ function contactSelect() {
     // )
 
 	tl1.to(".eyewrapper", { opacity: 0.8 })
-    tl1.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 0.5 })
-    tl1.fromTo(
+    tl2.fromTo(".contactside", { opacity: 0 }, { opacity: 1, duration: 0.5 })
+    tl2.fromTo(
       ".contactcontent",
       { opacity: 0, y: "100%" },
       { opacity: 1, duration: 1, y: "0%" }
     )
-    tl1.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
+    tl2.fromTo(".sociallinks", { opacity: 0 }, { opacity: 1, duration: 1.5 })
 
     tl6.fromTo(".visible", { opacity: 0.3 }, { opacity: 1 })
     firstMoveBalls()

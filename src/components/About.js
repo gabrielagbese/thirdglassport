@@ -79,14 +79,13 @@ const About = ({ fn }) => {
                             <p className="list-header">Tools and Frameworks:</p>
                             <ul className="skill-list">
                                 <li>Git</li>
-                                <li>Eclipse</li>
-                                <li>Visual Studio</li>
+                                <li>Next JS</li>
                                 <li>VS Code</li>
                                 <li>React</li>
                             </ul>
                             <ul className="skill-list">
-                                <li>Next JS</li>
                                 <li>Gatsby</li>
+                                <li>GSAP</li>
                                 <li>SCSS</li>
                                 <li>Tailwind</li>
                             </ul>
@@ -128,14 +127,13 @@ const About = ({ fn }) => {
                             <p className="list-header">Tools and Frameworks:</p>
                             <ul className="skill-list">
                                 <li>Git,</li>
-                                <li>Eclipse,</li>
-                                <li>Visual Studio,</li>
                                 <li>VS Code,</li>
                                 <li>React,</li>
+                                <li>Next JS,</li>
                             </ul>
                             <ul className="skill-list">
-                                <li>Next JS,</li>
                                 <li>Gatsby,</li>
+                                <li>GSAP,</li>
                                 <li>SCSS,</li>
                                 <li>Tailwind</li>
                             </ul>
