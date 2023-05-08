@@ -111,20 +111,25 @@ const Layout = ({ children }) => {
   })
 
   let hideEye = gsap.timeline();
+  let hideCard = gsap.timeline();
+  let hideBalls = gsap.timeline();
 
   //var contentlight = document.getElementsByClassName("content")[0]
   //contentlight.style.opacity = 1
 
   function checkAbout() {
     if (active === "aboutCard") {
-      setActive("heroCard")
-      hideEye.to(".eyewrapper", { opacity: 0 })
+      setTimeout(() => {
+        setActive("heroCard")
+        hideEye.to(".eyewrapper", { opacity: 0 })
+        tl5.revert();
+        tl1.revert();
+      }, 0.1)
     } else {
       setActive("aboutCard");
-      
       setTimeout(() => {
         aboutSelect()
-        changeColor("#0000ff", "#b90adc", "#0000ff")
+        changeColor("#0000ff", "#b90adc", "#0325ff")
       }, 0.1)
     }
   }
@@ -133,13 +138,13 @@ const Layout = ({ children }) => {
     if (active === "projectsCard") {
       setActive("heroCard")
       hideEye.to(".eyewrapper", { opacity: 0 })
+      tl5.revert();
+      tl1.revert();
     } else {
       setActive("projectsCard");
-      
       setTimeout(() => {
         projectSelect()
-        changeColor("#00d3fe", "#1500fb", "#ff009f")
-        
+        changeColor("#ff0075", "#1533fb", "#11e4ff")
       }, 0.1)
     }
   }
@@ -148,12 +153,13 @@ const Layout = ({ children }) => {
     if (active === "contactCard") {
       setActive("heroCard")
       hideEye.to(".eyewrapper", { opacity: 0 })
+      tl5.revert();
+      tl1.revert();
     } else {
       setActive("contactCard");
-      
       setTimeout(() => {
         contactSelect()
-        changeColor("#Ff009f", "#00ffee", "#0325ff")
+        changeColor("#0325ff", "#00ffee", "#ff66ff")
       }, 0.1)
     }
   }
@@ -210,39 +216,39 @@ const Layout = ({ children }) => {
         <div className="nav">
           <span
             onClick={() => {
-              setTimeout(()=>{
+              setTimeout(() => {
                 darken();
                 checkAbout();
-              },0.1)
+              }, 0.1)
             }}
             className="navspan"
           >
-            <h1 className="text navitem">About </h1>
+            <h1 className="navtext navitem">About </h1>
             <FiArrowUpRight className="arrow" />
           </span>
 
           <span
             onClick={() => {
-              setTimeout(()=>{
+              setTimeout(() => {
                 darken();
                 checkProjects();
-              },0.1)
+              }, 0.1)
             }}
             className="navspan"
           >
-            <h1 className="text navitem">Projects</h1>
+            <h1 className="navtext navitem">Projects</h1>
             <FiArrowUpRight className="arrow" />
           </span>
           <span
             onClick={() => {
-              setTimeout(()=>{
+              setTimeout(() => {
                 darken();
                 checkContact();
-              },0.1)
+              }, 0.1)
             }}
             className="navspan"
           >
-            <h1 className="text navitem">Contact </h1>
+            <h1 className="navtext navitem">Contact </h1>
             <FiArrowUpRight className="arrow" />
           </span>
         </div>
@@ -260,10 +266,10 @@ const Layout = ({ children }) => {
 function changeColor(color1, color2, color3) {
   var ball1 = document.getElementById("ball1")
   var ball2 = document.getElementById("ball2")
-  var colorIntensity = "ff"
+  var colorIntensity = "ee"
 
   ball1.style.background =
-    "linear-gradient(to left, " +
+    "linear-gradient(to right, " +
     color1 +
     colorIntensity +
     "," +
@@ -274,7 +280,7 @@ function changeColor(color1, color2, color3) {
     colorIntensity +
     ")"
   ball2.style.background =
-    "linear-gradient(to left, " +
+    "linear-gradient(to right, " +
     color1 +
     colorIntensity +
     "," +
@@ -458,7 +464,7 @@ function projectSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%", backgroundColor:"#f6f6f600" },
-      { opacity: 1, duration: 1.25, y: "0%",backgroundColor:"#b7b8e057"  }
+      { opacity: 1, duration: 1.25, y: "0%",backgroundColor:"#b7b8e033"  }
     )
     tl1.to(".eyewrapper", { opacity: 0.8 })
 
@@ -487,7 +493,7 @@ function projectSelect() {
     tl1.fromTo(
       ".cardwrapper",
       { opacity: 0.3, y: "100%", backgroundColor:"#f6f6f600" },
-      { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#b7b8e055"  }
+      { opacity: 1, duration: 1.5, y: "0%",backgroundColor:"#b7b8e022"  }
     )
 
 	  tl15.to(".eyewrapper", { opacity: 0.8 })

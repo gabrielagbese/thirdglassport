@@ -186,6 +186,16 @@
     }
 }
 
+.navtext {
+    font-family: "Chakra Petch", sans-serif;
+    color: rgba(255, 255, 255, 0.623);
+}
+
+.navspan :hover{
+    color: white;
+    //text-decoration: underline;
+}
+
 .arrow {
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.523);
@@ -267,7 +277,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .cardwrapper {
@@ -353,7 +362,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    border: thin solid red;
+    //border: thin solid red;
     @include xs{
         margin-top: 10%;
         width: 100%;
@@ -383,8 +392,9 @@
     };
     @include lg{
         height: 50%;
+        margin-bottom: -50%;
         border-radius: 60% 60% 0% 0%;
-        background-color: #1451833d;
+        background-color: #1451831f;
     }
 }
 
@@ -480,31 +490,37 @@
 .dino-wrapper{
     width: 100%;
     height: 100%;
-    border: thin solid green;
+    //border: thin solid green;
     box-sizing: border-box;
     user-select: none;
 }
 
 .above-nav{
-    width: 100%;
-    height: 80%;
-    border: thin solid red;
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
+    @include xs{
+        width: 100%;
+        height: 75%;
+    };
+    @include lg{
+        width: 100%;
+        height: 75%;
+    };
 }
 
 .world{
     overflow: hidden;
     position: relative;
-    outline: thin solid yellow;  
+    //border: 0.5px solid rgba(255, 255, 255, 0.301);  
+    border-radius: 15px;
 }
 
 .score{
     position: absolute;
     font-size: 3vmin;
     right: 1vmin;
-    top: 1vmin;
+    top: 7vmin;
 }
 
 .start-screen{
@@ -531,7 +547,7 @@
     --bottom: 0;
     position: absolute;
     left: 1%;
-    height: 60%;
+    height: 30%;
     bottom: calc(var(--bottom) * 1%);
     @include lg{
         height: 30%;
@@ -541,15 +557,22 @@
 .cactus{
     position: absolute;
     left: calc(var(--left) * 1%);
-    height: 60%;
+    height: 30%;
     bottom: 0;
     @include lg{
         height: 30%;
     }
 }
 .below-nav{
-    width: 100%;
-    height: 20%;
+    //border: thin solid yellow;
+    @include xs{
+        width: 100%;
+        height: 20%;
+    };
+    @include lg{
+        width: 100%;
+        height: 20%;
+    };
     
 }
 
@@ -578,13 +601,13 @@
     //border: thin solid red;
     width: 100%;
     @include xs{
-        height: 15vh;
+        height: 12.5vh;
     };
     @include md{
         
     };
     @include lg{
-        height: 25vh;
+        height: 30vh;
     };
 }
 
@@ -606,11 +629,11 @@
     font-weight: 700;
     justify-self: flex-start;
     @include xs{
-        font-size: 3rem;
+        font-size: 2.5rem;
         height: 9.5vh;
     };
     @include lg{
-        font-size: 5rem;
+        font-size: 4.5rem;
         height: 15vh;
     };
 }
@@ -623,7 +646,7 @@
     font-weight: 500;
     @include xs{
         font-size: 1.25rem;
-        margin-top: 2.5%;
+        //margin-top: 1.25%;
     };
     @include lg{
         font-size: 1.5rem;
@@ -640,8 +663,8 @@
     display: flex;
     width: auto;
     @include xs{       
-        margin-top: 1%;
-        font-size: 1.25rem;
+        
+        font-size: 1.125rem;
     };
     @include lg{
         margin-top: 0.5%;
@@ -704,7 +727,7 @@
         height: 30vh;
         transform: translateY(45%);
         border-radius: 50% 50% 50% 50%;
-        background-image: linear-gradient(to bottom  , #1a5d9443 , black 50%);
+        background-image: linear-gradient(to bottom  , #1a5d9443 , rgba(0, 0, 0, 0.518) 50%);
     };
     @include md{
         width: 90vh;
@@ -717,9 +740,9 @@
         margin-top: -6%;
         width: 100vh;
         height: 60vh;
-        transform: translateY(75.5%);
+        transform: translateY(55.5%);
         //border-radius: 50% 50% 50% 50%;
-        background-image: linear-gradient(to bottom  , #1a5d9433 , black 50%);
+        background-image: linear-gradient(to bottom  , #1a5d9433 , rgba(0, 0, 0, 0.63) 50%);
     };
 }
 
@@ -982,6 +1005,13 @@
     };
 }
 
+.biotext > .blur:hover{
+    border: 2px solid rgba(178, 164, 135, 0.45);
+    box-sizing: border-box;
+}
+
+
+
 
 .blurbio{
     overflow: auto;
@@ -1011,7 +1041,6 @@
     
     &::-webkit-scrollbar-track {
         border-radius: 7.5px;
-        //background-color: red;
         box-shadow: inset 0 0 10px rgba(155, 155, 155, 0);
         //border: 5px solid rgba(255, 255, 255, 0);
     }
@@ -1271,7 +1300,7 @@
     };
 }
 
-.about-button:hover{
+.default-link:hover{
     opacity: 0.8;
     cursor: pointer;
 }
@@ -1670,9 +1699,6 @@
 
 .contactcontent{
     opacity: 0;
-    border-top: 2px solid rgba(255, 255, 255, 0.125);
-    border-left: 2px solid rgba(255, 255, 255, 0.125);
-    border-right: 2px solid rgba(255, 255, 255, 0.125);
     border-bottom: 2px solid rgba(255, 255, 255, 0);
     //background-color: rgba(255, 255, 255, 0.055);
     @include xs{
@@ -1680,7 +1706,7 @@
         width: 95%;
         height: 71%;
         margin-top: 2%;
-        // margin-bottom: -5%;
+        border-top: 2px solid rgba(255, 255, 255, 0.006);
         border-radius: 15px 15px 0 0 ;
         background-color: rgba(0, 0, 0, 0.175);
     };
@@ -1690,6 +1716,9 @@
         margin-top: 5%;
         border-radius: 20px 20px 0 0 ;
         background-color: rgba(255, 255, 255, 0.02);
+        border-top: 2px solid rgba(255, 255, 255, 0.125);
+        border-left: 2px solid rgba(255, 255, 255, 0.125);
+        border-right: 2px solid rgba(255, 255, 255, 0.125);
     }
 }
 
@@ -1960,8 +1989,8 @@
     min-height: auto;
     margin: 1.25%;
     align-self: flex-end;
-    background-color: #7582daa1;
-    border: 1.5px solid #0325ff77;
+    background-color: #4357d7a1;
+    border: 1.5px solid #253fe487;
     border-radius: 35px 35px 0px 35px;
     padding: 5px 25px 5px 25px;
     @include xs{

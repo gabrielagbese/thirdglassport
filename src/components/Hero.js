@@ -8,9 +8,9 @@ import { useState } from "react";
 import Typewriter from 'typewriter-effect';
 import TextAnimation from "react-text-animations";
 
-import Dino from "./Dino";
+import Dino from "./DinoGame";
 
-const Hero = ({ fn }) => {
+export default function Hero() {
 
     useEffect(() => {
 
@@ -21,7 +21,7 @@ const Hero = ({ fn }) => {
             <div className="content2">
                 <div className="hero">
                     <div className="hero-underlier">
-                        {/* <div className="hero-light"></div> */}
+                        <div className="hero-light"></div>
                         <Dino />
                         {/* <div className="hero-stars">
                             <div class="starsi"></div>
@@ -42,7 +42,7 @@ const Hero = ({ fn }) => {
                                     loop: true,
                                 }}
                             />
-                            <p>&ensp;Roles</p>
+                            <p>&ensp;Opportunities</p>
                         </div>
                         <div className="hero-links">
                                 <div className="link blur"><a className="default-link" href="https://github.com/gabrielagbese" target="_blank">Github</a></div>
@@ -57,4 +57,3 @@ const Hero = ({ fn }) => {
     )
 }
 
-export default Hero;
